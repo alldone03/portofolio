@@ -8,7 +8,7 @@ function App() {
 
   return (
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/portofolio">
         <Routes>
           {routes.map((route, index) => (
             <Route key={index} path={route.path} element={route.element} />

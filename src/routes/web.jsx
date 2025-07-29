@@ -4,7 +4,7 @@ import Home from "../pages/Home";
 
 const routes = [
   {
-    path: "/",
+    path: "",
     element: <Home />,
     name: "Home",
   },
