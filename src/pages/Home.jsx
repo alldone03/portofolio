@@ -1,61 +1,59 @@
 import { Helmet } from "react-helmet-async";
-import myPhoto from "../assets/myPhoto.jpg";
-import LogoInstagram from "../assets/Instagram.png";
-import LogoGithub from "../assets/Github.png";
-import LogoLinkendin from "../assets/Linkedin.png";
-
+import AOSWrapper from "../components/AOSWrapper";
+import Navbar from "../components/layout/Navbar";
+import Hero from "../components/sections/Hero";
+import About from "../components/sections/About";
+import Skills from "../components/sections/Skills";
+import Projects from "../components/sections/Projects";
+import IntellectualProperty from "../components/sections/IntellectualProperty";
+import Certifications from "../components/sections/Certifications";
+import Contact from "../components/sections/Contact";
+import { PROFILE_DATA } from "../utils/constants";
 
 export default function Home() {
     return (
-        <div>
-            <Helmet>
-                <title>Home</title>
-            </Helmet>
-            <div className="container mx-auto text-center mt-10 flex flex-col items-center justify-center h-screen gap-3
-            ">
+        <AOSWrapper>
+            <div className="min-h-screen bg-base-100 font-sans text-base-content selection:bg-primary selection:text-white transition-colors duration-300">
+                <Helmet>
+                    <title>{PROFILE_DATA.name} | {PROFILE_DATA.role}</title>
+                    <meta name="description" content={PROFILE_DATA.description} />
+                </Helmet>
 
-                <h1 className="text-4xl ">Hi everyone, my name is</h1>
-                <h1 className="text-5xl font-bold text-info">Aldan <br /> Prayogi</h1>
-                <h1 className="text-4xl ">I&#39;m a <h1 className="font-bold text-info">Automation Engineer</h1></h1>
-                <p className="text-2xl text-success">I specialize in creating software that automates tasks and processes to make businesses more efficient.</p>
-                <div className="flex justify-center gap-3">
-                    <div className="bg-accent w-96 h-96 rounded-xl flex items-center justify-center">
-                        <div className="w-80 bg-white h-80  flex items-center justify-center">
+                <Navbar />
 
-                            <img src={myPhoto} alt="" className="w-52" />
+                <main>
+                    <Hero />
+                    <About />
+                    <Skills />
+                    <Projects />
+                    <IntellectualProperty />
+                    <Certifications />
+                    <Contact />
+                </main>
+
+                <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+                    <nav className="grid grid-flow-col gap-4">
+                        <a href="#about" className="link link-hover">About</a>
+                        <a href="#skills" className="link link-hover">Skills</a>
+                        <a href="#projects" className="link link-hover">Projects</a>
+                        <a href="#ip" className="link link-hover">IP / HAKI</a>
+                        <a href="#certifications" className="link link-hover">Certifications</a>
+                        <a href="#contact" className="link link-hover">Contact</a>
+                    </nav>
+                    <nav>
+                        <div className="grid grid-flow-col gap-4">
+                            {PROFILE_DATA.socials.map((social, index) => (
+                                <a key={index} href={social.url} target="_blank" rel="noopener noreferrer">
+                                    <img src={social.icon} alt={social.name} className="w-6 h-6 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" />
+                                </a>
+                            ))}
                         </div>
-                    </div>
-                </div>
-                {/* <button className="btn btn-secondary">Next</button> */}
+                    </nav>
+                    <aside>
+                        <p className="text-sm opacity-60">Copyright © {new Date().getFullYear()} - All rights reserved by {PROFILE_DATA.name}</p>
+                    </aside>
+                </footer>
             </div>
-            <div className="h-screen bg-primary p-10">
-
-                {/* <h1 className="font-bold text-3xl text-center">My Contact</h1> */}
-
-
-
-                <div className="p-3 font-bold text-5xl" >
-                    Looking Forward to working everywone
-                </div>
-                <div className="mt-5">
-
-                    <div className="font-bold text-center text-xl mt-10">
-                        My socials
-                    </div>
-                    <div className="flex justify-center gap-3 mt-5">
-                        <button className="btn  bg-accent-content w-24 h-24"><img src={LogoInstagram} alt="Instagram" className="" /></button>
-
-                        <button className="btn bg-accent-content w-24 h-24"><img src={LogoLinkendin} alt="Instagram" className="" /></button>
-                        <button className="btn bg-accent-content w-24 h-24"><img src={LogoGithub} alt="Instagram" className=" invert" /></button>
-                    </div>
-                </div>
-
-
-
-
-            </div>
-
-
-        </div >
-    )
+        </AOSWrapper>
+    );
 }

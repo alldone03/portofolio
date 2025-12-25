@@ -1,20 +1,20 @@
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
-
+import { ThemeProvider } from './context/ThemeContext'
 import routes from './routes/web'
 
 function App() {
-
   return (
     <HelmetProvider>
-      <BrowserRouter basename="/portofolio">
-        <Routes>
-          {routes.map((route, index) => (
-            <Route key={index} path={route.path} element={route.element} />
-          ))}
-        </Routes>
-      </BrowserRouter>
+      <ThemeProvider>
+        <BrowserRouter basename="/portofolio">
+          <Routes>
+            {routes.map((route, index) => (
+              <Route key={index} path={route.path} element={route.element} />
+            ))}
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
     </HelmetProvider>
   )
 }
