@@ -3,7 +3,13 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "winter");
+    const [theme, setTheme] = useState(() => {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) return savedTheme;
+
+        // Default to system theme
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "night" : "winter";
+    });
 
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);

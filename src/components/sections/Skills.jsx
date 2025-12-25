@@ -37,15 +37,15 @@ const Skills = () => {
                             </span>
                             Soft Skills
                         </h4>
-                        <div className="space-y-4">
+                        <div className="grid grid-cols-1 gap-4">
                             {PROFILE_DATA.skills.soft.map((skill, index) => (
-                                <div key={index} className="flex items-center justify-between bg-base-200/50 p-4 rounded-xl">
-                                    <span className="font-bold text-sm tracking-wide">{skill}</span>
-                                    <div className="flex gap-1">
-                                        {[1, 2, 3, 4, 5].map((i) => (
-                                            <div key={i} className={`w-2 h-2 rounded-full ${i <= 4 ? 'bg-secondary' : 'bg-secondary/20'}`}></div>
-                                        ))}
+                                <div key={index} className="flex items-center gap-4 bg-base-100 p-4 rounded-2xl border border-base-300 shadow-sm hover:border-secondary/30 transition-all group">
+                                    <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                        </svg>
                                     </div>
+                                    <span className="font-bold text-base-content/80 group-hover:text-base-content transition-colors">{skill}</span>
                                 </div>
                             ))}
                         </div>

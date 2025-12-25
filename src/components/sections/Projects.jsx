@@ -100,8 +100,8 @@ const Projects = () => {
                 {/* Modal for Project Details */}
                 {selectedProject && (
                     <dialog className="modal modal-open">
-                        <div className="modal-box max-w-4xl p-0 bg-base-100 rounded-[2.5rem] overflow-hidden border border-base-300">
-                            <div className="relative h-64 md:h-96">
+                        <div className="modal-box max-w-4xl p-0 bg-base-100 rounded-[2.5rem] overflow-hidden border border-base-300 max-h-[90vh] overflow-y-auto custom-scrollbar">
+                            <div className="relative h-48 md:h-96">
                                 {selectedProject.images && selectedProject.images.length > 0 ? (
                                     <>
                                         <img
