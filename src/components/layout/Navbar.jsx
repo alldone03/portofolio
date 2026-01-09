@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { PROFILE_DATA } from "../../utils/constants";
 import { useTheme } from "../../context/ThemeContext";
 
@@ -14,11 +15,13 @@ const Navbar = () => {
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#organization">Organization</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#ip">IP / HAKI</a></li>
                         <li><a href="#certifications">Certifications</a></li>
-                        <li><a href={PROFILE_DATA.resume} download className="font-bold text-primary">Resume</a></li>
+                        <li><Link to="/cv" className="font-bold text-primary">Resume</Link></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -30,11 +33,13 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><a href="#hero" className="hover:text-primary transition-colors">Home</a></li>
                     <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
+                    <li><a href="#education" className="hover:text-primary transition-colors">Education</a></li>
+                    <li><a href="#organization" className="hover:text-primary transition-colors">Organization</a></li>
                     <li><a href="#skills" className="hover:text-primary transition-colors">Skills</a></li>
                     <li><a href="#projects" className="hover:text-primary transition-colors">Projects</a></li>
                     <li><a href="#ip" className="hover:text-primary transition-colors">IP / HAKI</a></li>
                     <li><a href="#certifications" className="hover:text-primary transition-colors">Certifications</a></li>
-                    <li><a href={PROFILE_DATA.resume} download className="hover:text-primary transition-colors font-bold">Resume</a></li>
+                    <li><Link to="/cv" className="hover:text-primary transition-colors font-bold">Resume</Link></li>
                     <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
                 </ul>
             </div>

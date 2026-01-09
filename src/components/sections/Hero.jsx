@@ -1,7 +1,9 @@
 import { useState, useRef } from "react";
 import { PROFILE_DATA } from "../../utils/constants";
 import { useTheme } from "../../context/ThemeContext";
+import ImageWithSkeleton from "../common/ImageWithSkeleton";
 import myPhoto from "../../assets/myPhoto.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     const { theme } = useTheme();
@@ -51,16 +53,16 @@ const Hero = () => {
                         <a href="#projects" className="btn btn-primary btn-lg rounded-full px-8 shadow-lg shadow-primary/20">
                             View My Work
                         </a>
-                        <a
-                            href={PROFILE_DATA.resume}
-                            download
+                        <Link
+                            to='cv'
+                            // download
                             className="btn btn-outline btn-lg rounded-full px-8 hover:bg-primary hover:border-primary transition-all duration-300"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                             </svg>
                             Download CV
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -79,10 +81,11 @@ const Hero = () => {
                         ></div>
 
                         {/* The Image - Peeking out of the top */}
-                        <img
+                        <ImageWithSkeleton
                             src={myPhoto}
-                            alt={PROFILE_DATA.name}
-                            className={`relative z-10 w-full h-full object-contain transform transition-all duration-500`}
+                            alt={`Aldan Prayogi - ${PROFILE_DATA.role}`}
+                            className="relative z-10 w-full h-full transform transition-all duration-500"
+                            skeletonClassName="rounded-[3rem]"
                             style={{
                                 ...tiltStyles,
                                 filter: theme === 'night'
@@ -90,6 +93,7 @@ const Hero = () => {
                                     : 'drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2))'
                             }}
                         />
+
 
                         {/* Floating badges */}
                         <div className="absolute -bottom-6 -right-6 z-20 bg-base-100 p-4 rounded-2xl shadow-xl border border-base-300 hidden md:block" data-aos="zoom-in" data-aos-delay="500">

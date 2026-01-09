@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PROFILE_DATA } from "../../utils/constants";
+import ImageWithSkeleton from "../common/ImageWithSkeleton";
 
 const Projects = () => {
     const [showAll, setShowAll] = useState(false);
@@ -43,10 +44,10 @@ const Projects = () => {
                             data-aos-delay={index * 100}
                         >
                             <div className="relative h-64 overflow-hidden">
-                                <img
+                                <ImageWithSkeleton
                                     src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt={`${project.title} - Aldan Prayogi Project`}
+                                    className="w-full h-full group-hover:scale-110 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                                     <div className="flex gap-4">
@@ -78,7 +79,7 @@ const Projects = () => {
                                 >
                                     <span>View Details</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="17 8l4 4m0 0l-4 4m4-4H3" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
                                 </div>
                             </div>
@@ -104,10 +105,10 @@ const Projects = () => {
                             <div className="relative h-48 md:h-96">
                                 {selectedProject.images && selectedProject.images.length > 0 ? (
                                     <>
-                                        <img
+                                        <ImageWithSkeleton
                                             src={selectedProject.images[currentImageIndex]}
                                             alt={`${selectedProject.title} ${currentImageIndex + 1}`}
-                                            className="w-full h-full object-cover transition-opacity duration-500"
+                                            className="w-full h-full transition-opacity duration-500"
                                         />
                                         {selectedProject.images.length > 1 && (
                                             <>
@@ -135,7 +136,7 @@ const Projects = () => {
                                         )}
                                     </>
                                 ) : (
-                                    <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
+                                    <ImageWithSkeleton src={selectedProject.image} alt={selectedProject.title} className="w-full h-full" />
                                 )}
                                 <button
                                     onClick={() => setSelectedProject(null)}

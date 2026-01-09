@@ -36,7 +36,7 @@ const Contact = () => {
                                         </div>
                                         <div>
                                             <p className="text-xs opacity-60 font-bold uppercase tracking-widest mb-1">Locate Me</p>
-                                            <p className="font-bold text-lg">Jakarta, Indonesia</p>
+                                            <p className="font-bold text-lg">Bojonegoro, Indonesia</p>
                                         </div>
                                     </div>
                                 </div>

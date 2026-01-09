@@ -1,4 +1,5 @@
 import { PROFILE_DATA } from "../../utils/constants";
+import ImageWithSkeleton from "../common/ImageWithSkeleton";
 
 const Certifications = () => {
     return (
@@ -19,7 +20,7 @@ const Certifications = () => {
                             data-aos-delay={index * 100}
                         >
                             <div className="relative h-48 overflow-hidden">
-                                <img src={cert.image} alt={cert.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                <ImageWithSkeleton src={cert.image} alt={`${cert.title} Certification - ${cert.issuer}`} className="w-full h-full group-hover:scale-110 transition-transform duration-500" />
                                 <div className="absolute top-4 right-4 bg-base-100/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
                                     <span className="text-xs font-bold text-primary">{cert.year}</span>
                                 </div>

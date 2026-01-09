@@ -21,7 +21,7 @@ const About = () => {
                                     <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{exp.period}</p>
                                     <h5 className="text-lg font-bold">{exp.role}</h5>
                                     <p className="text-sm font-medium text-base-content/60 mb-2">{exp.company}</p>
-                                    <p className="text-sm text-base-content/70 leading-relaxed">
+                                    <p className="text-sm text-base-content/70 leading-relaxed whitespace-pre-line">
                                         {exp.description}
                                     </p>
                                 </div>
@@ -38,12 +38,12 @@ const About = () => {
 
                         <div className="grid grid-cols-2 gap-6" data-aos="zoom-in" data-aos-delay="200">
                             <div className="bg-primary p-8 rounded-3xl text-white transform hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-primary/20">
-                                <p className="text-4xl font-bold mb-2">4+</p>
+                                <p className="text-4xl font-bold mb-2">{PROFILE_DATA.experience.length}+</p>
                                 <p className="text-sm font-medium opacity-80 uppercase tracking-wider">Key Experiences</p>
                             </div>
                             <div className="bg-base-100 p-8 rounded-3xl text-base-content border border-base-300 transform hover:-translate-y-2 transition-all duration-300 shadow-xl">
-                                <p className="text-4xl font-bold mb-2 text-primary">3.70</p>
-                                <p className="text-sm font-bold opacity-60 uppercase tracking-wider">GPA (ITS)</p>
+                                <p className="text-4xl font-bold mb-2 text-primary">{PROFILE_DATA.projects.length}+</p>
+                                <p className="text-sm font-bold opacity-60 uppercase tracking-wider">Projects Completed</p>
                             </div>
                         </div>
                     </div>

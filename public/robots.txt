@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alldone03.github.io/portofolio/sitemap.xml
