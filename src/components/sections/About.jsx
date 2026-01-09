@@ -21,9 +21,17 @@ const About = () => {
                                     <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{exp.period}</p>
                                     <h5 className="text-lg font-bold">{exp.role}</h5>
                                     <p className="text-sm font-medium text-base-content/60 mb-2">{exp.company}</p>
-                                    <p className="text-sm text-base-content/70 leading-relaxed whitespace-pre-line">
-                                        {exp.description}
-                                    </p>
+                                    {Array.isArray(exp.description) ? (
+                                        <ul className="list-disc list-inside text-sm text-base-content/70 leading-relaxed space-y-1">
+                                            {exp.description.map((desc, i) => (
+                                                <li key={i}>{desc}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p className="text-sm text-base-content/70 leading-relaxed whitespace-pre-line">
+                                            {exp.description}
+                                        </p>
+                                    )}
                                 </div>
                             ))}
                         </div>

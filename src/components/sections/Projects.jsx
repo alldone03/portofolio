@@ -49,6 +49,11 @@ const Projects = () => {
                                     alt={`${project.title} - Aldan Prayogi Project`}
                                     className="w-full h-full group-hover:scale-110 transition-transform duration-700"
                                 />
+                                {project.year && (
+                                    <div className="absolute top-4 left-4 bg-base-100/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm z-10">
+                                        <span className="text-xs font-bold text-primary">{project.year}</span>
+                                    </div>
+                                )}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                                     <div className="flex gap-4">
                                         <button

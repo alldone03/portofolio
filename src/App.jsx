@@ -7,7 +7,7 @@ function App() {
   return (
     <HelmetProvider>
       <ThemeProvider>
-        <BrowserRouter basename="/portofolio">
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Routes>
             {routes.map((route, index) => (
               <Route key={index} path={route.path} element={route.element} />

@@ -60,9 +60,17 @@ const CV = () => {
                                     <span className="text-sm font-medium text-gray-600 whitespace-nowrap ml-4">{exp.period}</span>
                                 </div>
                                 <div className="text-sm font-semibold text-gray-700 mb-2">{exp.company}</div>
-                                <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-line">
-                                    {exp.description}
-                                </p>
+                                {Array.isArray(exp.description) ? (
+                                    <ul className="list-disc list-inside text-sm text-gray-800 leading-relaxed space-y-1">
+                                        {exp.description.map((desc, i) => (
+                                            <li key={i}>{desc}</li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-line">
+                                        {exp.description}
+                                    </p>
+                                )}
                             </div>
                         ))}
                     </div>
@@ -133,7 +141,7 @@ const CV = () => {
                         {PROFILE_DATA.projects.slice(0, 4).map((project, index) => (
                             <div key={index}>
                                 <h4 className="font-bold text-sm text-gray-900 mb-1">
-                                    {project.title} <span className="font-normal text-gray-600 text-xs">| {project.tags.join(", ")}</span>
+                                    {project.title} {project.year && <span>({project.year})</span>} <span className="font-normal text-gray-600 text-xs">| {project.tags.join(", ")}</span>
                                 </h4>
                                 <p className="text-sm text-gray-800 leading-snug">
                                     {project.description}

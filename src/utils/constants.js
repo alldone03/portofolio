@@ -1,6 +1,7 @@
-import instagramIcon from "../assets/Instagram.png";
-import linkedinIcon from "../assets/linkedin.png";
-import githubIcon from "../assets/Github.png";
+import instagramIcon from "../assets/Instagram.png?format=webp";
+import linkedinIcon from "../assets/linkedin.png?format=webp";
+import githubIcon from "../assets/Github.png?format=webp";
+import websiteIcon from "../assets/website.png?format=webp";
 
 export const PROFILE_DATA = {
   name: "Aldan Prayogi",
@@ -28,7 +29,7 @@ export const PROFILE_DATA = {
     {
       name: "Website",
       url: "https://alldone03.github.io/portofolio",
-      icon: githubIcon,
+      icon: websiteIcon,
     },
   ],
   skills: {
@@ -81,8 +82,11 @@ export const PROFILE_DATA = {
       company: "Pusat Studi Mitigasi Kebencanaan dan Perubahan Iklim (MKPI) ITS",
       role: "Researcher",
       period: "Aug 2025 - Present",
-      description:
-        "Developed earthquake prediction models using machine learning and deep learning techniques, Long Short-Term Memory (LSTM). Implemented data preprocessing, feature extraction, and model training using Python and TensorFlow, achieving high prediction accuracy and providing valuable insights for earthquake risk assessment. \nDeveloped Flood detector using ultrasonic sensor and microcontroller",
+      description:[
+
+        "Developed earthquake prediction models using machine learning and deep learning techniques, Long Short-Term Memory (LSTM). Implemented data preprocessing, feature extraction, and model training using Python and TensorFlow, achieving high prediction accuracy and providing valuable insights for earthquake risk assessment. ",
+        "Developed Flood detector using ultrasonic sensor and microcontroller"
+      ]
     },  
     {
       company: "PLN Nusantara Power And Services",
@@ -137,6 +141,7 @@ export const PROFILE_DATA = {
   projects: [
     {
       title: "Quality Inspection With Image Processing",
+      year: "2024",
       description:
         "Advanced model for automotive component inspection at TMMIN using YOLOv8, improving F1 score from 0.07 to 0.98.",
       details:
@@ -154,6 +159,7 @@ export const PROFILE_DATA = {
     },
     {
       title: "Egrek Digital",
+      year: "2024",
       description:
         "Palm oil harvesting efficiency research involving image classification and real-time monitoring with Raspberry Pi.",
       details:
@@ -170,6 +176,7 @@ export const PROFILE_DATA = {
     },
     {
       title: "Hydroponics Management System",
+      year: "2023",
       description:
         "Integrated IoT system for monitoring pH, TDS, and temperature using Laravel and multiple environmental sensors.",
       details:
@@ -185,6 +192,7 @@ export const PROFILE_DATA = {
     },
     {
       title: "Monitoring 3 Phase Motor",
+      year: "2023",
       description:
         "Industrial IoT solution for real-time monitoring of three-phase motor health and power consumption.",
       details:
@@ -199,6 +207,7 @@ export const PROFILE_DATA = {
     },
     {
       title: "Line Tracer Analog",
+      year: "2022",
       description:
         "High-speed analog robot designed for precise line following using PID control.",
       details:

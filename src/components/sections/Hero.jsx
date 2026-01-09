@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { PROFILE_DATA } from "../../utils/constants";
 import { useTheme } from "../../context/ThemeContext";
 import ImageWithSkeleton from "../common/ImageWithSkeleton";
-import myPhoto from "../../assets/myPhoto.png";
+import myPhoto from "../../assets/myPhoto.png?format=webp";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
