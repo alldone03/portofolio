@@ -1,13 +1,16 @@
 import { useState } from "react";
-import { PROFILE_DATA } from "../../utils/constants";
+import { useTranslation } from "react-i18next";
 import ImageWithSkeleton from "../common/ImageWithSkeleton";
 
 const Projects = () => {
+    const { t } = useTranslation();
+    const projects = t('projects.items', { returnObjects: true });
+
     const [showAll, setShowAll] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    const visibleProjects = showAll ? PROFILE_DATA.projects : PROFILE_DATA.projects.slice(0, 3);
+    const visibleProjects = showAll ? projects : projects.slice(0, 6);
 
     const handleOpenModal = (project) => {
         setSelectedProject(project);
@@ -31,7 +34,7 @@ const Projects = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center mb-16" data-aos="fade-up">
                     <h2 className="text-sm font-bold text-primary uppercase tracking-[0.3em] mb-4">Portfolio</h2>
-                    <h3 className="text-3xl md:text-4xl font-bold text-center text-base-content">Featured Projects</h3>
+                    <h3 className="text-3xl md:text-4xl font-bold text-center text-base-content">{t('projects.title')}</h3>
                     <div className="w-20 h-1.5 bg-primary rounded-full mt-6"></div>
                 </div>
 
@@ -60,7 +63,7 @@ const Projects = () => {
                                             onClick={() => handleOpenModal(project)}
                                             className="btn btn-primary btn-sm rounded-full"
                                         >
-                                            View Details
+                                            {t('projects.view_project')}
                                         </button>
                                     </div>
                                 </div>
@@ -82,7 +85,7 @@ const Projects = () => {
                                     onClick={() => handleOpenModal(project)}
                                     className="flex items-center text-primary font-bold text-sm cursor-pointer hover:gap-3 transition-all"
                                 >
-                                    <span>View Details</span>
+                                    <span>{t('projects.view_project')}</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
@@ -92,7 +95,7 @@ const Projects = () => {
                     ))}
                 </div>
 
-                {PROFILE_DATA.projects.length > 3 && (
+                {projects.length > 3 && (
                     <div className="mt-16 text-center">
                         <button
                             onClick={() => setShowAll(!showAll)}
@@ -180,7 +183,7 @@ const Projects = () => {
                                             rel="noopener noreferrer"
                                             className="btn btn-outline rounded-2xl px-8"
                                         >
-                                            Source Code
+                                            {t('projects.source_code')}
                                         </a>
                                     )}
                                 </div>

@@ -1,6 +1,9 @@
-import { PROFILE_DATA } from "../../utils/constants";
+import { useTranslation } from "react-i18next";
 
 const Education = () => {
+    const { t } = useTranslation();
+    const education = t('education.items', { returnObjects: true });
+
     return (
         <section id="education" className="py-24 bg-base-100 relative overflow-hidden">
             {/* Background Decoration */}
@@ -9,13 +12,13 @@ const Education = () => {
 
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center mb-16" data-aos="fade-up">
-                    <h2 className="text-sm font-bold text-primary uppercase tracking-[0.3em] mb-4">Academic Background</h2>
-                    <h3 className="text-3xl md:text-4xl font-bold text-center">Education</h3>
+                    <h2 className="text-sm font-bold text-primary uppercase tracking-[0.3em] mb-4">{t('education_section.subtitle')}</h2>
+                    <h3 className="text-3xl md:text-4xl font-bold text-center">{t('education.title')}</h3>
                     <div className="w-20 h-1.5 bg-primary rounded-full mt-6"></div>
                 </div>
 
                 <div className="max-w-4xl mx-auto space-y-8">
-                    {PROFILE_DATA.education.map((edu, index) => (
+                    {education.map((edu, index) => (
                         <div
                             key={index}
                             className="bg-base-100 rounded-[2.5rem] border border-base-200 p-8 md:p-12 shadow-lg relative group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
@@ -49,7 +52,7 @@ const Education = () => {
 
                                     {edu.achievements && (
                                         <div>
-                                            <h6 className="text-sm font-bold text-base-content/80 uppercase tracking-widest mb-4">Key Achievements</h6>
+                                            <h6 className="text-sm font-bold text-base-content/80 uppercase tracking-widest mb-4">{t('education_section.key_achievements')}</h6>
                                             <ul className="grid gap-3">
                                                 {edu.achievements.map((achievement, idx) => (
                                                     <li key={idx} className="flex items-start gap-3 text-base-content/70 text-sm">

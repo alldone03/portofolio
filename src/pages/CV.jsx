@@ -1,12 +1,21 @@
-import React from 'react';
-import { PROFILE_DATA } from "../utils/constants";
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { PROFILE_DATA } from "../utils/constants";
 
 const CV = () => {
+    const { t } = useTranslation();
+    const experiences = t('experience.items', { returnObjects: true });
+    const education = t('education.items', { returnObjects: true });
+    const organizations = t('organization.items', { returnObjects: true });
+    const hardSkills = t('skills.hard', { returnObjects: true });
+    const softSkills = t('skills.soft', { returnObjects: true });
+    const projects = t('projects.items', { returnObjects: true });
+    const certifications = t('certifications.items', { returnObjects: true });
+
     return (
         <div className="bg-white min-h-screen text-black font-sans p-8 md:p-16 print:p-0">
             <Helmet>
-                <title>CV | {PROFILE_DATA.name}</title>
+                <title>CV | {t('profile.name')}</title>
             </Helmet>
 
             {/* Print Controls - Hidden when printing */}
@@ -25,8 +34,8 @@ const CV = () => {
             <div className="max-w-4xl mx-auto bg-white print:max-w-none">
                 {/* Header */}
                 <header className="border-b-2 border-gray-800 pb-6 mb-6">
-                    <h1 className="text-4xl font-bold uppercase tracking-wider mb-2">{PROFILE_DATA.name}</h1>
-                    <h2 className="text-xl font-medium text-gray-700 mb-4">{PROFILE_DATA.role}</h2>
+                    <h1 className="text-4xl font-bold uppercase tracking-wider mb-2">{t('profile.name')}</h1>
+                    <h2 className="text-xl font-medium text-gray-700 mb-4">{t('profile.role')}</h2>
 
                     <div className="flex flex-wrap gap-1 text-sm text-gray-600">
                         <div className="flex items-center gap-1">
@@ -45,7 +54,7 @@ const CV = () => {
                 <section className="mb-6">
                     <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">Professional Summary</h3>
                     <p className="text-sm leading-relaxed text-justify text-gray-800">
-                        {PROFILE_DATA.description}
+                        {t('profile.description')}
                     </p>
                 </section>
 
@@ -53,7 +62,7 @@ const CV = () => {
                 <section className="mb-6">
                     <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">Work Experience</h3>
                     <div className="space-y-5">
-                        {PROFILE_DATA.experience.map((exp, index) => (
+                        {experiences.map((exp, index) => (
                             <div key={index}>
                                 <div className="flex justify-between items-baseline mb-1">
                                     <h4 className="font-bold text-gray-900">{exp.role}</h4>
@@ -77,11 +86,11 @@ const CV = () => {
                 </section>
 
                 {/* Education */}
-                {PROFILE_DATA.education && (
+                {education && (
                     <section className="mb-6">
                         <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">Education</h3>
                         <div className="space-y-4">
-                            {PROFILE_DATA.education.map((edu, index) => (
+                            {education.map((edu, index) => (
                                 <div key={index}>
                                     <div className="flex justify-between items-baseline mb-1">
                                         <h4 className="font-bold text-gray-900">{edu.school}</h4>
@@ -99,11 +108,11 @@ const CV = () => {
                 )}
 
                 {/* Organization Experience */}
-                {PROFILE_DATA.organization && (
+                {organizations && (
                     <section className="mb-6">
                         <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">Organization Experience</h3>
                         <div className="space-y-4">
-                            {PROFILE_DATA.organization.map((org, index) => (
+                            {organizations.map((org, index) => (
                                 <div key={index}>
                                     <div className="flex justify-between items-baseline mb-1">
                                         <h4 className="font-bold text-gray-900">{org.name}</h4>
@@ -125,11 +134,11 @@ const CV = () => {
                     <div className="grid grid-cols-1 gap-y-2">
                         <div>
                             <span className="font-bold text-sm text-gray-900">Hard Skills: </span>
-                            <span className="text-sm text-gray-800">{PROFILE_DATA.skills.hard.join(", ")}</span>
+                            <span className="text-sm text-gray-800">{hardSkills.join(", ")}</span>
                         </div>
                         <div>
                             <span className="font-bold text-sm text-gray-900">Soft Skills: </span>
-                            <span className="text-sm text-gray-800">{PROFILE_DATA.skills.soft.join(", ")}</span>
+                            <span className="text-sm text-gray-800">{softSkills.join(", ")}</span>
                         </div>
                     </div>
                 </section>
@@ -138,7 +147,7 @@ const CV = () => {
                 <section className="mb-6" style={{ pageBreakInside: 'avoid' }}>
                     <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">Key Projects</h3>
                     <div className="space-y-4">
-                        {PROFILE_DATA.projects.slice(0, 4).map((project, index) => (
+                        {projects.slice(0, 4).map((project, index) => (
                             <div key={index}>
                                 <h4 className="font-bold text-sm text-gray-900 mb-1">
                                     {project.title} {project.year && <span>({project.year})</span>} <span className="font-normal text-gray-600 text-xs">| {project.tags.join(", ")}</span>
@@ -155,7 +164,7 @@ const CV = () => {
                 <section className="mb-6" style={{ pageBreakInside: 'avoid' }}>
                     <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">Certifications</h3>
                     <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
-                        {PROFILE_DATA.certifications.map((cert, index) => (
+                        {certifications.map((cert, index) => (
                             <li key={index}>
                                 <span className="font-bold inline-flex items-center gap-1 align-bottom">
                                     {cert.title}

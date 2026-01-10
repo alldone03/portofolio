@@ -11,28 +11,31 @@ import Contact from "../components/sections/Contact";
 import Education from "../components/sections/Education";
 import Organization from "../components/sections/Organization";
 import { PROFILE_DATA } from "../utils/constants";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+    const { t } = useTranslation();
+
     return (
         <AOSWrapper>
             <div className="min-h-screen bg-base-100 font-sans text-base-content selection:bg-primary selection:text-white transition-colors duration-300">
                 <Helmet>
-                    <title>{PROFILE_DATA.name} | {PROFILE_DATA.role}</title>
-                    <meta name="description" content={PROFILE_DATA.description} />
+                    <title>{t('profile.name')} | {t('profile.role')}</title>
+                    <meta name="description" content={t('profile.description')} />
                     <meta name="keywords" content="Aldan Prayogi, Automation Engineer, Software Engineer, Portfolio, YOLOv8, Image Processing, ITS, Toyota Motor Manufacturing Indonesia" />
 
                     {/* Open Graph / Facebook */}
                     <meta property="og:type" content="website" />
                     <meta property="og:url" content="https://aldan.vercel.app/" />
-                    <meta property="og:title" content={`${PROFILE_DATA.name} | ${PROFILE_DATA.role}`} />
-                    <meta property="og:description" content={PROFILE_DATA.description} />
+                    <meta property="og:title" content={`${t('profile.name')} | ${t('profile.role')}`} />
+                    <meta property="og:description" content={t('profile.description')} />
                     <meta property="og:image" content="https://aldan.vercel.app/og-image.png" />
 
                     {/* Twitter */}
                     <meta property="twitter:card" content="summary_large_image" />
                     <meta property="twitter:url" content="https://aldan.vercel.app/" />
-                    <meta property="twitter:title" content={`${PROFILE_DATA.name} | ${PROFILE_DATA.role}`} />
-                    <meta property="twitter:description" content={PROFILE_DATA.description} />
+                    <meta property="twitter:title" content={`${t('profile.name')} | ${t('profile.role')}`} />
+                    <meta property="twitter:description" content={t('profile.description')} />
                     <meta property="twitter:image" content="https://aldan.vercel.app/og-image.png" />
 
                     <link rel="canonical" href="https://aldan.vercel.app" />
@@ -69,14 +72,14 @@ export default function Home() {
 
                 <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
                     <nav className="flex flex-wrap justify-center gap-4">
-                        <a href="#about" className="link link-hover">About</a>
-                        <a href="#education" className="link link-hover">Education</a>
-                        <a href="#organization" className="link link-hover">Organization</a>
-                        <a href="#skills" className="link link-hover">Skills</a>
-                        <a href="#projects" className="link link-hover">Projects</a>
-                        <a href="#ip" className="link link-hover">IP / HAKI</a>
-                        <a href="#certifications" className="link link-hover">Certifications</a>
-                        <a href="#contact" className="link link-hover">Contact</a>
+                        <a href="#about" className="link link-hover">{t('nav.about')}</a>
+                        <a href="#education" className="link link-hover">{t('nav.education')}</a>
+                        <a href="#organization" className="link link-hover">{t('nav.organization')}</a>
+                        <a href="#skills" className="link link-hover">{t('nav.skills')}</a>
+                        <a href="#projects" className="link link-hover">{t('nav.projects')}</a>
+                        <a href="#ip" className="link link-hover">{t('nav.ip')}</a>
+                        <a href="#certifications" className="link link-hover">{t('nav.certifications')}</a>
+                        <a href="#contact" className="link link-hover">{t('nav.contact')}</a>
                     </nav>
                     <nav>
                         <div className="flex flex-wrap justify-center gap-4 bg-white rounded-xl p-2">
@@ -88,7 +91,7 @@ export default function Home() {
                         </div>
                     </nav>
                     <aside>
-                        <p className="text-sm opacity-60">Copyright © {new Date().getFullYear()} - All rights reserved by {PROFILE_DATA.name}</p>
+                        <p className="text-sm opacity-60">Copyright © {new Date().getFullYear()} - All rights reserved by {t('profile.name')}</p>
                     </aside>
                 </footer>
             </div>

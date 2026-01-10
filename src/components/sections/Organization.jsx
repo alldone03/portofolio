@@ -1,19 +1,22 @@
-import { PROFILE_DATA } from "../../utils/constants";
+import { useTranslation } from "react-i18next";
 
 const Organization = () => {
-    if (!PROFILE_DATA.organization) return null;
+    const { t } = useTranslation();
+    const organizations = t('organization.items', { returnObjects: true });
+
+    if (!organizations) return null;
 
     return (
         <section id="organization" className="py-24 bg-base-200/50 relative overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center mb-16" data-aos="fade-up">
-                    <h2 className="text-sm font-bold text-primary uppercase tracking-[0.3em] mb-4">Leadership & Teamwork</h2>
-                    <h3 className="text-3xl md:text-4xl font-bold text-center">Organization Experience</h3>
+                    <h2 className="text-sm font-bold text-primary uppercase tracking-[0.3em] mb-4">{t('nav.organization')}</h2>
+                    <h3 className="text-3xl md:text-4xl font-bold text-center">{t('organization.title')}</h3>
                     <div className="w-20 h-1.5 bg-primary rounded-full mt-6"></div>
                 </div>
 
                 <div className="max-w-4xl mx-auto space-y-8">
-                    {PROFILE_DATA.organization.map((org, index) => (
+                    {organizations.map((org, index) => (
                         <div
                             key={index}
                             className="bg-base-100 rounded-[2.5rem] border border-base-200 p-8 md:p-12 shadow-lg relative group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"

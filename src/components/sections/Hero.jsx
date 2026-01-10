@@ -4,9 +4,11 @@ import { useTheme } from "../../context/ThemeContext";
 import ImageWithSkeleton from "../common/ImageWithSkeleton";
 import myPhoto from "../../assets/myPhoto.png?format=webp";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
     const { theme } = useTheme();
+    const { t } = useTranslation();
     const [tiltStyles, setTiltStyles] = useState({ transform: "perspective(1000px) rotateX(0deg) rotateY(0deg)" });
     const containerRef = useRef(null);
 
@@ -37,21 +39,21 @@ const Hero = () => {
         <section id="hero" className="min-h-[90vh] flex flex-col items-center justify-center pt-20 px-4">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
                 <div className="flex-1 text-center md:text-left" data-aos="fade-right">
-                    <h2 className="text-xl md:text-2xl font-medium text-primary mb-4">Hello, I'm</h2>
+                    <h2 className="text-xl md:text-2xl font-medium text-primary mb-4">{t('hero.greeting')}</h2>
                     <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
                         <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                            {PROFILE_DATA.name}
+                            {t('profile.name')}
                         </span>
                     </h1>
                     <h3 className="text-2xl md:text-3xl font-semibold text-base-content/70 mb-8">
-                        {PROFILE_DATA.role}
+                        {t('profile.role')}
                     </h3>
                     <p className="text-lg md:text-xl text-base-content/60 max-w-2xl leading-relaxed mb-10">
-                        {PROFILE_DATA.description}
+                        {t('profile.description')}
                     </p>
                     <div className="flex flex-wrap justify-center md:justify-start gap-4">
                         <a href="#projects" className="btn btn-primary btn-lg rounded-full px-8 shadow-lg shadow-primary/20">
-                            View My Work
+                            {t('projects.view_project')}
                         </a>
                         <Link
                             to='cv'
@@ -61,7 +63,7 @@ const Hero = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                             </svg>
-                            Download CV
+                            {t('hero.download_cv')}
                         </Link>
                     </div>
                 </div>

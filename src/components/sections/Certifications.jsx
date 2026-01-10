@@ -1,18 +1,21 @@
-import { PROFILE_DATA } from "../../utils/constants";
+import { useTranslation } from "react-i18next";
 import ImageWithSkeleton from "../common/ImageWithSkeleton";
 
 const Certifications = () => {
+    const { t } = useTranslation();
+    const certifications = t('certifications.items', { returnObjects: true });
+
     return (
         <section id="certifications" className="py-24">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center mb-16" data-aos="fade-up">
                     <h2 className="text-sm font-bold text-primary uppercase tracking-[0.3em] mb-4">Credentials</h2>
-                    <h3 className="text-3xl md:text-4xl font-bold text-center">Certifications</h3>
+                    <h3 className="text-3xl md:text-4xl font-bold text-center">{t('certifications.title')}</h3>
                     <div className="w-20 h-1.5 bg-primary rounded-full mt-6"></div>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {PROFILE_DATA.certifications.map((cert, index) => (
+                    {certifications.map((cert, index) => (
                         <div
                             key={index}
                             className="bg-base-100 rounded-3xl border border-base-300 shadow-xl overflow-hidden group hover:-translate-y-2 transition-all duration-300"

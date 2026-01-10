@@ -1,12 +1,15 @@
+import { useTranslation } from "react-i18next";
 import { PROFILE_DATA } from "../../utils/constants";
 
 const Contact = () => {
+    const { t } = useTranslation();
+
     return (
         <section id="contact" className="py-24">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center mb-16" data-aos="fade-up">
-                    <h2 className="text-sm font-bold text-primary uppercase tracking-[0.3em] mb-4">Get In Touch</h2>
-                    <h3 className="text-3xl md:text-4xl font-bold text-center">Let's Build Something Together</h3>
+                    <h2 className="text-sm font-bold text-primary uppercase tracking-[0.3em] mb-4">{t('contact.title')}</h2>
+                    <h3 className="text-3xl md:text-4xl font-bold text-center">{t('contact.subtitle')}</h3>
                     <div className="w-20 h-1.5 bg-primary rounded-full mt-6"></div>
                 </div>
 
@@ -25,7 +28,7 @@ const Contact = () => {
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                         </div>
                                         <div>
-                                            <p className="text-xs opacity-60 font-bold uppercase tracking-widest mb-1">Email Me</p>
+                                            <p className="text-xs opacity-60 font-bold uppercase tracking-widest mb-1">{t('contact.email')}</p>
                                             <p className="font-bold text-lg">{PROFILE_DATA.email}</p>
                                         </div>
                                     </div>
@@ -62,11 +65,11 @@ const Contact = () => {
                             <form className="space-y-8">
                                 <div className="grid md:grid-cols-2 gap-8">
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-gray-400 uppercase tracking-widest">Your Name</label>
+                                        <label className="text-sm font-bold text-gray-400 uppercase tracking-widest">{t('contact.form.name')}</label>
                                         <input type="text" placeholder="John Doe" className="input input-bordered w-full bg-gray-50 border-none focus:bg-white focus:ring-2 focus:ring-primary/20 transition-all rounded-2xl p-6" />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-gray-400 uppercase tracking-widest">Email Address</label>
+                                        <label className="text-sm font-bold text-gray-400 uppercase tracking-widest">{t('contact.form.email')}</label>
                                         <input type="email" placeholder="john@example.com" className="input input-bordered w-full bg-gray-50 border-none focus:bg-white focus:ring-2 focus:ring-primary/20 transition-all rounded-2xl p-6" />
                                     </div>
                                 </div>
@@ -75,11 +78,11 @@ const Contact = () => {
                                     <input type="text" placeholder="Project Inquiry" className="input input-bordered w-full bg-gray-50 border-none focus:bg-white focus:ring-2 focus:ring-primary/20 transition-all rounded-2xl p-6" />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-400 uppercase tracking-widest">Message</label>
+                                    <label className="text-sm font-bold text-gray-400 uppercase tracking-widest">{t('contact.form.message')}</label>
                                     <textarea placeholder="Tell me about your project..." className="textarea textarea-bordered w-full bg-gray-50 border-none focus:bg-white focus:ring-2 focus:ring-primary/20 transition-all rounded-2xl p-6 min-h-[150px]"></textarea>
                                 </div>
                                 <button type="button" className="btn btn-primary btn-lg w-full rounded-2xl shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all">
-                                    Send Message
+                                    {t('contact.form.submit')}
                                 </button>
                             </form>
                         </div>
