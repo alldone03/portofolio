@@ -13,7 +13,7 @@ const CV = () => {
     const certifications = t('certifications.items', { returnObjects: true });
 
     return (
-        <div className="bg-white min-h-screen text-black font-sans p-8 md:p-16 print:p-0">
+        <div className="bg-white min-h-screen text-black font-sans p-8 md:p-16 print:p-0 leading-tight">
             <Helmet>
                 <title>CV | {t('profile.name')}</title>
             </Helmet>
@@ -39,7 +39,8 @@ const CV = () => {
 
                     <div className="flex flex-wrap gap-1 text-sm text-gray-600">
                         <div className="flex items-center gap-1">
-                            <span className="font-bold">Email:</span> {PROFILE_DATA.email}
+                            <span className="font-bold">Email:</span>
+                            <a href={`mailto:${PROFILE_DATA.email}`}>{PROFILE_DATA.email}</a>
                         </div>
                         {PROFILE_DATA.socials.map((social, index) => (
                             <div key={index} className="flex items-center gap-1">
@@ -52,15 +53,15 @@ const CV = () => {
 
                 {/* Summary */}
                 <section className="mb-6">
-                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">Professional Summary</h3>
+                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">{t('cv.summary')}</h3>
                     <p className="text-sm leading-relaxed text-justify text-gray-800">
                         {t('profile.description')}
                     </p>
                 </section>
 
                 {/* Experience */}
-                <section className="mb-6">
-                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">Work Experience</h3>
+                <section className="mb-6  ">
+                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.experience')}</h3>
                     <div className="space-y-5">
                         {experiences.map((exp, index) => (
                             <div key={index}>
@@ -88,7 +89,7 @@ const CV = () => {
                 {/* Education */}
                 {education && (
                     <section className="mb-6">
-                        <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">Education</h3>
+                        <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.education')}</h3>
                         <div className="space-y-4">
                             {education.map((edu, index) => (
                                 <div key={index}>
@@ -110,7 +111,7 @@ const CV = () => {
                 {/* Organization Experience */}
                 {organizations && (
                     <section className="mb-6">
-                        <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">Organization Experience</h3>
+                        <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.organization')}</h3>
                         <div className="space-y-4">
                             {organizations.map((org, index) => (
                                 <div key={index}>
@@ -130,14 +131,14 @@ const CV = () => {
 
                 {/* Skills */}
                 <section className="mb-6">
-                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">Technical Skills</h3>
+                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.skills')}</h3>
                     <div className="grid grid-cols-1 gap-y-2">
                         <div>
-                            <span className="font-bold text-sm text-gray-900">Hard Skills: </span>
+                            <span className="font-bold text-sm text-gray-900">{t('cv.skills_hard')}: </span>
                             <span className="text-sm text-gray-800">{hardSkills.join(", ")}</span>
                         </div>
                         <div>
-                            <span className="font-bold text-sm text-gray-900">Soft Skills: </span>
+                            <span className="font-bold text-sm text-gray-900">{t('cv.skills_soft')}: </span>
                             <span className="text-sm text-gray-800">{softSkills.join(", ")}</span>
                         </div>
                     </div>
@@ -145,7 +146,7 @@ const CV = () => {
 
                 {/* Projects */}
                 <section className="mb-6" style={{ pageBreakInside: 'avoid' }}>
-                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">Key Projects</h3>
+                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.projects')}</h3>
                     <div className="space-y-4">
                         {projects.slice(0, 4).map((project, index) => (
                             <div key={index}>
@@ -162,7 +163,7 @@ const CV = () => {
 
                 {/* Certifications (Compact) */}
                 <section className="mb-6" style={{ pageBreakInside: 'avoid' }}>
-                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">Certifications</h3>
+                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.certifications')}</h3>
                     <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
                         {certifications.map((cert, index) => (
                             <li key={index}>

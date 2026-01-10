@@ -25,7 +25,7 @@ export const PROFILE_DATA = {
     },
     {
       name: "Website",
-      url: "https://aldan.vercel.app",
+      url: "https://alldone03.github.io/portofolio",
       icon: websiteIcon,
     },
   ],
@@ -49,6 +49,17 @@ const en = {
     greeting: "Hello, I'm",
     download_cv: "Download CV",
     contact_me: "Contact Me"
+  },
+  cv: {
+    summary: "Professional Summary",
+    experience: "Work Experience",
+    education: "Education",
+    organization: "Organization Experience",
+    skills: "Technical Skills",
+    projects: "Key Projects",
+    certifications: "Certifications",
+    skills_hard: "Hard Skills",
+    skills_soft: "Soft Skills"
   },
   about_section: {
     title: "About Me",
@@ -174,6 +185,21 @@ const en = {
     view_project: "View Project",
     source_code: "Source Code",
     items: [
+      {
+        title: "Insamo Earthquake detection and Insamo Flood detection",
+        year: "2024",
+        description: "",
+        details: "Detailed breakdown: This project involved collecting thousands of images from the production line, labeling them using CVAT, and training a YOLOv8 model. The model was then deployed on an industrial PC to provide real-time feedback to operators.",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+        images: [
+          "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=2070&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
+        ],
+        link_visitsite: "https://example.com",
+        link_sourcecode: "https://github.com",
+        tags: ["YOLOv8", "Python", "TMMIN"],
+      },
       {
         title: "Quality Inspection With Image Processing",
         year: "2024",
@@ -307,6 +333,11 @@ const en = {
   }
 };
 
+
+
+
+
+
 const id = {
   nav: {
     home: "Beranda",
@@ -325,6 +356,17 @@ const id = {
     greeting: "Halo, saya",
     download_cv: "Unduh CV",
     contact_me: "Hubungi Saya"
+  },
+  cv: {
+    summary: "Ringkasan Profesional",
+    experience: "Pengalaman Kerja",
+    education: "Pendidikan",
+    organization: "Pengalaman Organisasi",
+    skills: "Keahlian Teknis",
+    projects: "Proyek Utama",
+    certifications: "Sertifikasi",
+    skills_hard: "Hard Skills",
+    skills_soft: "Soft Skills"
   },
   about_section: {
     title: "Tentang Saya",
