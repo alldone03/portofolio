@@ -1,7 +1,7 @@
-import Home from "../pages/Home";
-import CV from "../pages/CV";
+import { lazy } from "react";
 
-
+const Home = lazy(() => import("../pages/Home"));
+const CV = lazy(() => import("../pages/CV"));
 
 const routes = [
   {

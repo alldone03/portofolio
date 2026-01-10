@@ -28,7 +28,7 @@ export const PROFILE_DATA = {
     },
     {
       name: "Website",
-      url: "https://alldone03.github.io/portofolio",
+      url: "https://aldan.vercel.app",
       icon: websiteIcon,
     },
   ],

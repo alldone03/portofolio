@@ -23,19 +23,19 @@ export default function Home() {
 
                     {/* Open Graph / Facebook */}
                     <meta property="og:type" content="website" />
-                    <meta property="og:url" content="https://alldone03.github.io/portofolio/" />
+                    <meta property="og:url" content="https://aldan.vercel.app/" />
                     <meta property="og:title" content={`${PROFILE_DATA.name} | ${PROFILE_DATA.role}`} />
                     <meta property="og:description" content={PROFILE_DATA.description} />
-                    <meta property="og:image" content="https://alldone03.github.io/portofolio/og-image.png" />
+                    <meta property="og:image" content="https://aldan.vercel.app/og-image.png" />
 
                     {/* Twitter */}
                     <meta property="twitter:card" content="summary_large_image" />
-                    <meta property="twitter:url" content="https://alldone03.github.io/portofolio/" />
+                    <meta property="twitter:url" content="https://aldan.vercel.app/" />
                     <meta property="twitter:title" content={`${PROFILE_DATA.name} | ${PROFILE_DATA.role}`} />
                     <meta property="twitter:description" content={PROFILE_DATA.description} />
-                    <meta property="twitter:image" content="https://alldone03.github.io/portofolio/og-image.png" />
+                    <meta property="twitter:image" content="https://aldan.vercel.app/og-image.png" />
 
-                    <link rel="canonical" href="https://alldone03.github.io/portofolio" />
+                    <link rel="canonical" href="https://aldan.vercel.app" />
 
                     {/* JSON-LD Structured Data */}
                     <script type="application/ld+json">
@@ -43,12 +43,12 @@ export default function Home() {
                             "@context": "https://schema.org",
                             "@type": "Person",
                             "name": PROFILE_DATA.name,
-                            "url": "https://alldone03.github.io/portofolio/",
+                            "url": "https://aldan.vercel.app/",
                             "jobTitle": PROFILE_DATA.role,
                             "description": PROFILE_DATA.description,
                             "sameAs": PROFILE_DATA.socials.map(social => social.url),
                             "email": PROFILE_DATA.email,
-                            "image": "https://alldone03.github.io/portofolio/og-image.png"
+                            "image": "https://aldan.vercel.app/og-image.png"
                         })}
                     </script>
                 </Helmet>
