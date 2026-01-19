@@ -4,6 +4,14 @@ import { imagetools } from "vite-imagetools";
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  plugins: [react(), imagetools()],
+  plugins: [
+    react(),
+    imagetools({
+      defaultDirectives: new URLSearchParams({
+        format: "webp",
+        quality: "30",
+      }),
+    }),
+  ],
   base: mode === "gh-pages" ? "/portofolio/" : "/",
 }));

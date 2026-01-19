@@ -11,7 +11,13 @@ const ImageWithSkeleton = ({ src, alt, className, style, skeletonClassName }) =>
                     className={`absolute inset-0 bg-base-300 animate-pulse ${skeletonClassName}`}
                     style={{ zIndex: 1 }}
                 >
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-base-100/10 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"></div>
+                    {/* Shimmer */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-base-100/10 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" />
+
+                    {/* Spinner */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="loading loading-spinner loading-md text-primary"></span>
+                    </div>
                 </div>
             )}
 

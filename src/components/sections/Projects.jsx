@@ -114,6 +114,7 @@ const Projects = () => {
                                 {selectedProject.images && selectedProject.images.length > 0 ? (
                                     <>
                                         <ImageWithSkeleton
+                                            key={currentImageIndex}
                                             src={selectedProject.images[currentImageIndex]}
                                             alt={`${selectedProject.title} ${currentImageIndex + 1}`}
                                             className="w-full h-full transition-opacity duration-500"
