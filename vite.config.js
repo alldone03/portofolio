@@ -14,4 +14,5 @@ export default defineConfig(({ mode }) => ({
     }),
   ],
   base: mode === "gh-pages" ? "/portofolio/" : "/",
+  
 }));

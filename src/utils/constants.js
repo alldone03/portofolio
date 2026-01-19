@@ -13,7 +13,7 @@ import Insamo3 from "../assets/Insamo/20251105_151302.webp";
 const cogniva = Object.entries(
   import.meta.glob("../assets/Cogniva AI Assesment System/*.webp", {
     eager: true,
-  })
+  }),
 )
   .sort((a, b) => a[0].localeCompare(b[0])) // urut Slide1, Slide2, ...
   .map(([, img]) => img.default);
@@ -87,7 +87,7 @@ const en = {
     name: "Aldan Prayogi",
     role: "Automation Engineer",
     description:
-      "A passionate professional with strong collaboration skills and experience working in cross-disciplinary teams. Strong listening abilities support a deep understanding of diverse team perspectives and needs. Believes that effective teamwork and clear communication are essential to achieving outstanding results, with a commitment to contributing and continuously learning to reach shared goals.",
+      "Engineer experienced in computer vision, embedded systems, and web applications, focused on automating inspection and monitoring processes. Delivered solutions that improved accuracy up to 98% and reduced operational time from manual to near real-time.",
   },
   skills: {
     title: "Skills",
@@ -105,6 +105,7 @@ const en = {
       "Image Processing (OpenCV)",
       "YOLOv8",
       "Canva",
+      "Yokogawa DCS",
     ],
     soft: [
       "Collaboration & Teamwork",
@@ -127,12 +128,12 @@ const en = {
         school: "Institut Teknologi Sepuluh Nopember (ITS)",
         degree: "Bachelor of Applied Science in Automation Engineering",
         period: "2022 - Present",
-        gpa: "3.60/4.00",
+        gpa: "3.68/4.00",
         description:
           "Focused on Industrial Automation, PLC, IoT, and Embedded Systems. Active in robotics and research projects, maintaining a strong academic record.",
         achievements: [
           "Published Research on Palm Oil Harvesting Efficiency",
-          "Lead Developer for multiple campus digitalization projects",
+          "Lead campus digitalization projects",
         ],
       },
     ],
@@ -144,53 +145,72 @@ const en = {
         company: "Direktorat Sumber Daya Manusia dan Organisasi ITS",
         role: "Software Engineer",
         period: "Oct 2025 - Present",
-        description:
-          "Designed and implemented a full-stack web-based assessment platform with dynamic question difficulty, scoring logic, and learning recommendations. Built REST APIs, structured relational databases, and React-based dashboards for admins and users.",
+        description: [
+          "Designed and implemented a full-stack web-based assessment platform to automate and standardize competency assessments, combined dynamic question difficulty, scoring logic, and personalized learning recommendations.",
+        ],
       },
       {
         company:
           "Pusat Studi Mitigasi Kebencanaan dan Perubahan Iklim (MKPI) ITS",
-        role: "Researcher",
+        role: "Project Manager",
         period: "Aug 2025 - Present",
         description: [
-          "Developed earthquake prediction models using machine learning and deep learning techniques, Long Short-Term Memory (LSTM). Implemented data preprocessing, feature extraction, and model training using Python and TensorFlow, achieving high prediction accuracy and providing valuable insights for earthquake risk assessment.",
-          "Developed Flood detector using ultrasonic sensor and microcontroller",
+          "Served as Project Manager responsible for project planning and timeline management. When microcontroller resource limitations caused prediction processing errors, led the decision to migrate computational workloads to the backend, with result transmitted as status signals to trigger alarm, ensuring system reliability and on-time delivery.",
         ],
       },
       {
         company: "PLN Nusantara Power And Services",
-        role: "Internship",
+        role: "Automation And Decision Support",
         period: "Aug 2025 - Jan 2025",
         description:
-          "Built an object crack detection system for concrete structures using image processing and YOLOv8, achieving 95% accuracy and enhancing maintenance efficiency.",
+          "Automated the inspection of micro-cracks in solar panel (PLTS) modules that were difficult to identify through manual inspection even with electroluminescence (EL) imaging. Developed a YOLO-based image processing pipeline and a data summarization application to convert image-level detection results into actionable inspection summaries, supporting more efficient and consistent maintenance evaluations.",
       },
       {
         company: "Toyota Motor Manufacturing Indonesia",
-        role: "Internship",
+        role: "Digital Manufacturing / DX Engineer Intern",
         period: "Aug 2024 - Aug 2025",
-        description:
-          "Built an object detection pipeline using YOLOv8 to classify automotive components and automate annotation, reducing labeling time by over 70% and achieving 98.87% accuracy.",
+        description: [
+          "Supported TPS DX initiatives by developing production dashboards integrated with manufacturing systems to visualize end-to-end processes, product tracking, and cycle time per manpower and machine.",
+          "Improved visual inspection performance on the underbody inspection line by redesigning the object detection pipeline to meet inspection standards, increasing detection accuracy to 98.87% and reducing inspection time from 40 seconds to 5 seconds per unit.",
+          "Optimized the data labeling workflow, reducing annotation time for 100 images from 2166 minutes to 489 minutes, significantly accelerating model iteration and deployment readiness.",
+        ],
+      },
+      {
+        company: "LPK Yaruki Solusi Indonesia",
+        role: "Web Developer (Marketing Website) — Freelance",
+        period: "Jun 2025 - Sep 2025",
+        description: [
+          "Optimized frontend performance, achieving a 35% faster page load time to improve user experience and retention.",
+          "Supported early-stage growth by acquiring 120 new users in the first month, reaching 125 active users, with traffic primarily driven by direct and organic search channels.",
+        ],
       },
       {
         company: "Research Egrek Digital (ITS)",
         role: "Researcher",
         period: "Mar 2024 - Jul 2024",
-        description:
-          "Developed image processing scripts and an Android classification app (Flutter) with 90%+ accuracy for palm oil harvesting efficiency.",
+        description: [
+          "Developed a computer vision–based inspection system to reduce subjectivity in identifying ripe and unripe palm oil fruit bunches at elevated heights, where human visual assessment is limited. Implemented image processing pipelines and an Android classification application (Flutter) to enable consistent evaluations and store inspection data for management decision support in harvesting operations.",
+        ],
       },
       {
         company: "Hysage (ITS)",
-        role: "Project Management",
+        role: "IoT & Web Systems Engineer (Project Lead)",
         period: "Aug 2023 - Dec 2023",
         description:
-          "Designed electrical wiring and developed real-time IoT monitoring systems using Laravel for hydroponics management.",
+          "Led the end-to-end development of an IoT-based hydroponics management system addressing inconsistent nutrient maintenance due to limited human presence. Designed electrical systems, implemented hardware control logic, and developed a Laravel-based web platform to monitor and remotely control nutrient composition in real time.",
       },
       {
         company: "Elmech Technology",
-        role: "Part Time",
+        role: "Embedded & IoT Engineer (Part-Time)",
         period: "Jan 2022 - Aug 2022",
-        description:
-          "Designed custom PCBs, assembled electronic components, and programmed Arduino microcontrollers in C++ for machine prototypes.",
+        description: [
+          "Designed custom PCBs for 3-phase power monitoring systems using PZEM sensors.",
+          "Programmed Arduino-based controllers (C++) and conducted system testing to meet quality standards.",
+          "Integrated 3-phase energy monitoring with Blynk and web-based IoT platforms.",
+          "Implemented Modbus communication with Schneider PM1200 power meters.",
+          "Designed 3D enclosure models for box component and assembled electronic components.",
+          "Ensured system reliability through validation and quality control procedures.",
+        ],
       },
     ],
   },
