@@ -186,7 +186,7 @@ const en = {
       },
       {
         company: "Research Egrek Digital (ITS)",
-        role: "Researcher",
+        role: "Applied Computer Vision Researcher",
         period: "Mar 2024 - Jul 2024",
         description: [
           "Developed a computer vision–based inspection system to reduce subjectivity in identifying ripe and unripe palm oil fruit bunches at elevated heights, where human visual assessment is limited. Implemented image processing pipelines and an Android classification application (Flutter) to enable consistent evaluations and store inspection data for management decision support in harvesting operations.",
