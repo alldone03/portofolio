@@ -85,7 +85,7 @@ const en = {
   },
   profile: {
     name: "Aldan Prayogi",
-    role: "Automation Engineer",
+    role: "Automation & Control Systems Engineer",
     description:
       "Engineer experienced in computer vision, embedded systems, and web applications, focused on automating inspection and monitoring processes. Delivered solutions that improved accuracy up to 98% and reduced operational time from manual to near real-time.",
   },
