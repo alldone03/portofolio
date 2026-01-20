@@ -20,7 +20,7 @@ const cogniva = Object.entries(
 
 export const PROFILE_DATA = {
   name: "Aldan Prayogi",
-  role: "Automation Engineer",
+  role: "Automation & Control Systems Engineer",
   email: "prayogialdan@gmail.com",
   socials: [
     {
