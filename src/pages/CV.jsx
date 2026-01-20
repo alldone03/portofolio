@@ -4,13 +4,16 @@ import { PROFILE_DATA } from "../utils/constants";
 
 const CV = () => {
     const { t } = useTranslation();
-    const experiences = t('experience.items', { returnObjects: true });
+
+    // Get all items and filter only those with showInCV === true (or undefined for backward compatibility)
+    const experiences = t('experience.items', { returnObjects: true }).filter(item => item.showInCV !== false);
     const education = t('education.items', { returnObjects: true });
-    const organizations = t('organization.items', { returnObjects: true });
+    const organizations = t('organization.items', { returnObjects: true }).filter(item => item.showInCV !== false);
     const hardSkills = t('skills.hard', { returnObjects: true });
     const softSkills = t('skills.soft', { returnObjects: true });
-    const projects = t('projects.items', { returnObjects: true });
-    const certifications = t('certifications.items', { returnObjects: true });
+    const projects = t('projects.items', { returnObjects: true }).filter(item => item.showInCV !== false);
+    const certifications = t('certifications.items', { returnObjects: true }).filter(item => item.showInCV !== false);
+
 
     return (
         <div className="bg-white min-h-screen text-black font-sans p-8 md:p-16 print:p-0 leading-tight">
@@ -60,34 +63,36 @@ const CV = () => {
                 </section>
 
                 {/* Experience */}
-                <section className="mb-6  ">
-                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.experience')}</h3>
-                    <div className="space-y-5">
-                        {experiences.map((exp, index) => (
-                            <div key={index}>
-                                <div className="flex justify-between items-baseline mb-1">
-                                    <h4 className="font-bold text-gray-900">{exp.role}</h4>
-                                    <span className="text-sm font-medium text-gray-600 whitespace-nowrap ml-4">{exp.period}</span>
+                {experiences.length > 0 && (
+                    <section className="mb-6  ">
+                        <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.experience')}</h3>
+                        <div className="space-y-5">
+                            {experiences.map((exp, index) => (
+                                <div key={index}>
+                                    <div className="flex justify-between items-baseline mb-1">
+                                        <h4 className="font-bold text-gray-900">{exp.role}</h4>
+                                        <span className="text-sm font-medium text-gray-600 whitespace-nowrap ml-4">{exp.period}</span>
+                                    </div>
+                                    <div className="text-sm font-semibold text-gray-700 mb-2">{exp.company}</div>
+                                    {Array.isArray(exp.description) ? (
+                                        <ul className="list-disc list-inside text-sm text-gray-800 leading-relaxed space-y-1">
+                                            {exp.description.map((desc, i) => (
+                                                <li key={i}>{desc}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-line">
+                                            {exp.description}
+                                        </p>
+                                    )}
                                 </div>
-                                <div className="text-sm font-semibold text-gray-700 mb-2">{exp.company}</div>
-                                {Array.isArray(exp.description) ? (
-                                    <ul className="list-disc list-inside text-sm text-gray-800 leading-relaxed space-y-1">
-                                        {exp.description.map((desc, i) => (
-                                            <li key={i}>{desc}</li>
-                                        ))}
-                                    </ul>
-                                ) : (
-                                    <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-line">
-                                        {exp.description}
-                                    </p>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                            ))}
+                        </div>
+                    </section>
+                )}
 
                 {/* Education */}
-                {education && (
+                {education && education.length > 0 && (
                     <section className="mb-6">
                         <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.education')}</h3>
                         <div className="space-y-4">
@@ -109,7 +114,7 @@ const CV = () => {
                 )}
 
                 {/* Organization Experience */}
-                {organizations && (
+                {organizations && organizations.length > 0 && (
                     <section className="mb-6">
                         <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.organization')}</h3>
                         <div className="space-y-4">
@@ -120,9 +125,17 @@ const CV = () => {
                                         <span className="text-sm font-medium text-gray-600 whitespace-nowrap ml-4">{org.period}</span>
                                     </div>
                                     <div className="text-sm font-semibold text-gray-700 mb-1">{org.role}</div>
-                                    <p className="text-sm text-gray-800 leading-relaxed">
-                                        {org.description}
-                                    </p>
+                                    {Array.isArray(org.description) ? (
+                                        <ul className="list-disc list-inside text-sm text-gray-800 leading-relaxed space-y-1">
+                                            {org.description.map((desc, i) => (
+                                                <li key={i}>{desc}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p className="text-sm text-gray-800 leading-relaxed">
+                                            {org.description}
+                                        </p>
+                                    )}
                                 </div>
                             ))}
                         </div>
@@ -145,42 +158,54 @@ const CV = () => {
                 </section>
 
                 {/* Projects */}
-                <section className="mb-6" style={{ pageBreakInside: 'avoid' }}>
-                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.projects')}</h3>
-                    <div className="space-y-4">
-                        {projects.slice(0, 4).map((project, index) => (
-                            <div key={index}>
-                                <h4 className="font-bold text-sm text-gray-900 mb-1">
-                                    {project.title} {project.year && <span>({project.year})</span>} <span className="font-normal text-gray-600 text-xs">| {project.tags.join(", ")}</span>
-                                </h4>
-                                <p className="text-sm text-gray-800 leading-snug">
-                                    {project.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                {projects.length > 0 && (
+                    <section className="mb-6" style={{ pageBreakInside: 'avoid' }}>
+                        <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.projects')}</h3>
+                        <div className="space-y-4">
+                            {projects.slice(0, 4).map((project, index) => (
+                                <div key={index}>
+                                    <h4 className="font-bold text-sm text-gray-900 mb-1">
+                                        {project.title} {project.year && <span>({project.year})</span>} <span className="font-normal text-gray-600 text-xs">| {project.tags.join(", ")}</span>
+                                    </h4>
+                                    {Array.isArray(project.description) ? (
+                                        <ul className="list-disc list-inside text-sm text-gray-800 leading-relaxed space-y-1">
+                                            {project.description.map((desc, i) => (
+                                                <li key={i}>{desc}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p className="text-sm text-gray-800 leading-snug">
+                                            {project.description}
+                                        </p>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                )}
 
                 {/* Certifications (Compact) */}
-                <section className="mb-6" style={{ pageBreakInside: 'avoid' }}>
-                    <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.certifications')}</h3>
-                    <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
-                        {certifications.map((cert, index) => (
-                            <li key={index}>
-                                <span className="font-bold inline-flex items-center gap-1 align-bottom">
-                                    {cert.title}
-                                    {cert.link && cert.link !== "#" && (
-                                        <a href={cert.link} target="_blank" rel="noopener noreferrer" title="View Certificate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-blue-500 hover:text-blue-700 transition-colors" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                            </svg>
-                                        </a>
-                                    )}
-                                </span> - {cert.issuer} ({cert.year})
-                            </li>
-                        ))}
-                    </ul>
-                </section>
+                {certifications.length > 0 && (
+                    <section className="mb-6" style={{ pageBreakInside: 'avoid' }}>
+                        <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-4 pb-1">{t('cv.certifications')}</h3>
+                        <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
+                            {certifications.map((cert, index) => (
+                                <li key={index}>
+                                    <span className="font-bold inline-flex items-center gap-1 align-bottom">
+                                        {cert.title}
+                                        {cert.link && cert.link !== "#" && (
+                                            <a href={cert.link} target="_blank" rel="noopener noreferrer" title="View Certificate">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-blue-500 hover:text-blue-700 transition-colors" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                </svg>
+                                            </a>
+                                        )}
+                                    </span> - {cert.issuer} ({cert.year})
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+                )}
 
             </div>
         </div>

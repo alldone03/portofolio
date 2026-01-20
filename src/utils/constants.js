@@ -92,30 +92,24 @@ const en = {
   skills: {
     title: "Skills",
     hard: [
-      "Web Development (Laravel)",
-      "Python Programming",
-      "Design 3D (Fusion 360)",
-      "Instrumentation & Control Engineer",
-      "Design PCB",
-      "Electrical Wiring",
-      "Flutter Android Development",
-      "PLC-Based Control",
-      "Toyota Production System (TPS)",
-      "DCS (Yokogawa)",
-      "Image Processing (OpenCV)",
-      "YOLOv8",
-      "Canva",
-      "Yokogawa DCS",
-    ],
-    soft: [
-      "Collaboration & Teamwork",
-      "Adaptability",
-      "Attention to Detail",
-      "Critical Thinking",
-      "Curiosity & Willingness to Learn",
-      "Data Driven Decision Making",
-      "Public Speaking",
-    ],
+  "Distributed Control System (Yokogawa DCS)",
+  "Control Logic Design (Sequence & Interlock)",
+  "Instrumentation & Control Engineering",
+  "PLC-Based Control Systems",
+  "Electrical & Control Panel Wiring",
+  "Industrial Automation Systems",
+  "Control System Troubleshooting",
+  "Linux Server (Ubuntu VPS)",
+  "Docker & Docker Compose",
+  "Git & CI/CD (GitHub Actions)"
+],
+soft: [
+  "Problem Solving",
+  "Analytical Thinking",
+  "Technical Communication",
+  "Collaboration & Teamwork",
+  "Fast Learner"
+]
   },
   education_section: {
     subtitle: "Academic Background",
@@ -130,7 +124,7 @@ const en = {
         period: "2022 - Present",
         gpa: "3.68/4.00",
         description:
-          "Focused on Industrial Automation, PLC, IoT, and Embedded Systems. Active in robotics and research projects, maintaining a strong academic record.",
+          "Focused on Industrial Automation and Process Control with emphasis on Distributed Control Systems (DCS), PLC logic design, and field instrumentation. Gained hands-on experience through applied projects involving control logic implementation, signal handling (analog & digital), interlocks, and basic troubleshooting concepts relevant to oil & gas and manufacturing operations.",
         achievements: [
           "Published Research on Palm Oil Harvesting Efficiency",
           "Lead campus digitalization projects",
@@ -148,6 +142,7 @@ const en = {
         description: [
           "Designed and implemented a full-stack web-based assessment platform to automate and standardize competency assessments, combined dynamic question difficulty, scoring logic, and personalized learning recommendations.",
         ],
+        showInCV: true, // Set to false to hide from CV
       },
       {
         company:
@@ -157,6 +152,7 @@ const en = {
         description: [
           "Served as Project Manager responsible for project planning and timeline management. When microcontroller resource limitations caused prediction processing errors, led the decision to migrate computational workloads to the backend, with result transmitted as status signals to trigger alarm, ensuring system reliability and on-time delivery.",
         ],
+        showInCV: true,
       },
       {
         company: "PLN Nusantara Power And Services",
@@ -164,6 +160,7 @@ const en = {
         period: "Aug 2025 - Jan 2025",
         description:
           "Automated the inspection of micro-cracks in solar panel (PLTS) modules that were difficult to identify through manual inspection even with electroluminescence (EL) imaging. Developed a YOLO-based image processing pipeline and a data summarization application to convert image-level detection results into actionable inspection summaries, supporting more efficient and consistent maintenance evaluations.",
+        showInCV: true,
       },
       {
         company: "Toyota Motor Manufacturing Indonesia",
@@ -174,6 +171,7 @@ const en = {
           "Improved visual inspection performance on the underbody inspection line by redesigning the object detection pipeline to meet inspection standards, increasing detection accuracy to 98.87% and reducing inspection time from 40 seconds to 5 seconds per unit.",
           "Optimized the data labeling workflow, reducing annotation time for 100 images from 2166 minutes to 489 minutes, significantly accelerating model iteration and deployment readiness.",
         ],
+        showInCV: true,
       },
       {
         company: "LPK Yaruki Solusi Indonesia",
@@ -183,6 +181,7 @@ const en = {
           "Optimized frontend performance, achieving a 35% faster page load time to improve user experience and retention.",
           "Supported early-stage growth by acquiring 120 new users in the first month, reaching 125 active users, with traffic primarily driven by direct and organic search channels.",
         ],
+        showInCV: true,
       },
       {
         company: "Research Egrek Digital (ITS)",
@@ -191,6 +190,7 @@ const en = {
         description: [
           "Developed a computer vision–based inspection system to reduce subjectivity in identifying ripe and unripe palm oil fruit bunches at elevated heights, where human visual assessment is limited. Implemented image processing pipelines and an Android classification application (Flutter) to enable consistent evaluations and store inspection data for management decision support in harvesting operations.",
         ],
+        showInCV: true,
       },
       {
         company: "Hysage (ITS)",
@@ -198,6 +198,7 @@ const en = {
         period: "Aug 2023 - Dec 2023",
         description:
           "Led the end-to-end development of an IoT-based hydroponics management system addressing inconsistent nutrient maintenance due to limited human presence. Designed electrical systems, implemented hardware control logic, and developed a Laravel-based web platform to monitor and remotely control nutrient composition in real time.",
+        showInCV: true,
       },
       {
         company: "Elmech Technology",
@@ -211,6 +212,7 @@ const en = {
           "Designed 3D enclosure models for box component and assembled electronic components.",
           "Ensured system reliability through validation and quality control procedures.",
         ],
+        showInCV: true,
       },
     ],
   },
@@ -222,7 +224,10 @@ const en = {
         role: "Staff profession and science",
         period: "2023 - 2024",
         description:
-          "Led the research division to foster innovation and technical skills among students. Organized workshops on microcontroller programming and IoT, managing a team of 15 staff members and multiple student projects.",
+          ["Delivered hands-on technical training focused on PLC programming fundamentals for automation engineering students",
+"Explained control logic using practical analogies and real-world process examples to improve conceptual understanding",
+"Helped students grasp core automation concepts including sequence logic, I/O behavior, and control flow through practice-based sessions"],
+        showInCV: true,
       },
     ],
   },
@@ -232,16 +237,27 @@ const en = {
     source_code: "Source Code",
     items: [
       {
-        title: "Cogniva AI Assessment System",
+        title: "Cogniva – AI Assessment & Adaptive Learning Platform",
         year: "2026",
         description:
-          "This project is about AI Adaptive learning by Assessment of the user. AI have to give recomendation to user based on their wrong answer and refer to where the document have to study.",
-        details: "",
+          "A production-ready adaptive learning platform deployed using CI/CD, Docker, and Nginx, consisting of multiple backend services and a frontend application.",
+        details:
+          "Designed and deployed an end-to-end system with two backend services and one frontend, containerized using Docker and orchestrated with Docker Compose. Implemented CI/CD using GitHub Actions with remote deployment to an Ubuntu VPS via SSH. Configured Nginx as a reverse proxy to handle routing and service isolation.",
         image: cogniva[0],
         images: [...cogniva],
         link_visitsite: "https://example.com",
         link_sourcecode: "https://github.com",
-        tags: ["python Flask", "React", "Docker"],
+        tags: [
+          "CI/CD",
+          "GitHub Actions",
+          "Docker",
+          "Docker Compose",
+          "Nginx",
+          "Ubuntu VPS",
+          "React",
+          "Python Flask",
+        ],
+        showInCV: false,
       },
       {
         title: "Insamo Earthquake detection and Insamo Flood detection",
@@ -254,6 +270,7 @@ const en = {
         link_visitsite: "https://example.com",
         link_sourcecode: "https://github.com",
         tags: ["ESP32", "Microcontroller", "MQTT"],
+        showInCV: false,
       },
       {
         title: "Quality Inspection With Image Processing",
@@ -272,6 +289,7 @@ const en = {
         link_visitsite: "https://example.com",
         link_sourcecode: "https://github.com",
         tags: ["YOLOv8", "Python", "TMMIN"],
+        showInCV: false,
       },
       {
         title: "Egrek Digital",
@@ -289,6 +307,7 @@ const en = {
         ],
         link_sourcecode: "https://github.com",
         tags: ["Flutter", "Python", "OpenCV"],
+        showInCV: false,
       },
       {
         title: "Hydroponics Management System",
@@ -305,6 +324,7 @@ const en = {
           "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
         ],
         tags: ["IoT", "Laravel", "Automation"],
+        showInCV: false,
       },
       {
         title: "Monitoring 3 Phase Motor",
@@ -320,6 +340,7 @@ const en = {
           "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?q=80&w=2070&auto=format&fit=crop",
         ],
         tags: ["IoT", "STM32", "Instrumentation"],
+        showInCV: false,
       },
       {
         title: "Line Tracer Analog",
@@ -335,6 +356,7 @@ const en = {
           "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2070&auto=format&fit=crop",
         ],
         tags: ["Analog", "Robotics", "PCB Design"],
+        showInCV: false,
       },
     ],
   },
@@ -346,9 +368,10 @@ const en = {
         title: "Master Integrated Automation",
         issuer: "PT Yokogawa Indonesia",
         description: "From sensor to Smart Decision DCS.",
-        link: "https://www.yokogawa.co.id/",
+        link: "https://www.linkedin.com/in/aldan-prayogi/overlay/1764163558362/single-media-viewer/?profileId=ACoAAD5j078BAJ2NLam_Q5grELpvkefZIrsuwus",
         image:
-          "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop",
+          "https://media.licdn.com/dms/image/v2/D562DAQEyATADBSanvA/profile-treasury-document-cover-images_480/B56ZrAV1hfJQBI-/0/1764163545446?e=1769526000&v=beta&t=m2r_zOrj3whWMT_odsbkZXaaWlABbtYGdC7VkJpFhP4",
+        showInCV: true,
       },
       {
         year: "2020",
@@ -356,18 +379,20 @@ const en = {
         issuer: "BNSP",
         description:
           "Installation technician certification for industrial PLC systems.",
-        link: "#",
+        link: "https://www.linkedin.com/in/aldan-prayogi/details/certifications/1760368721827/single-media-viewer/?profileId=ACoAAD5j078BAJ2NLam_Q5grELpvkefZIrsuwus",
         image:
-          "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2070&auto=format&fit=crop",
+          "https://media.licdn.com/dms/image/v2/D562DAQHpuIMfONm61g/profile-treasury-document-cover-images_480/B56ZneJg6RI0BI-/0/1760368673363?e=1769529600&v=beta&t=O6UB0gEV6Ce0VYoqiG9TQxX_WELBjnrRSVKemLzwMFY",
+        showInCV: true,
       },
       {
         year: "2019",
         title: "Simple Building Electrical Installation",
         issuer: "BNSP",
         description: "Fundamental electrical wiring and installation safety.",
-        link: "#",
+        link: "https://www.linkedin.com/in/aldan-prayogi/details/certifications/1760368530534/single-media-viewer/?profileId=ACoAAD5j078BAJ2NLam_Q5grELpvkefZIrsuwus",
         image:
-          "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop",
+          "https://media.licdn.com/dms/image/v2/D562DAQHqDeMeNYCNKA/profile-treasury-document-cover-images_480/B56ZneI_M5G0BI-/0/1760368524141?e=1769529600&v=beta&t=ZaEgrbIWgUUbbVodRXKpcOHh-JxQuqPp2vd6GHzsOgY",
+        showInCV: true,
       },
     ],
   },
@@ -408,6 +433,13 @@ const en = {
     },
   },
 };
+
+
+
+
+
+
+
 
 const id = {
   nav: {
@@ -508,6 +540,7 @@ const id = {
         period: "Okt 2025 - Sekarang",
         description:
           "Merancang dan mengimplementasikan platform penilaian berbasis web full-stack dengan tingkat kesulitan soal dinamis, logika penilaian, dan rekomendasi pembelajaran. Membangun REST API, database relasional terstruktur, dan dashboard berbasis React untuk admin dan pengguna.",
+        showInCV: true,
       },
       {
         company:
@@ -518,6 +551,7 @@ const id = {
           "Mengembangkan model prediksi gempa menggunakan teknik machine learning dan deep learning, Long Short-Term Memory (LSTM). Melakukan pra-pemrosesan data, ekstraksi fitur, dan pelatihan model menggunakan Python dan TensorFlow, mencapai akurasi prediksi tinggi dan memberikan wawasan berharga untuk penilaian risiko gempa.",
           "Mengembangkan detektor banjir menggunakan sensor ultrasonik dan mikrokontroler",
         ],
+        showInCV: true,
       },
       {
         company: "PLN Nusantara Power And Services",
@@ -525,6 +559,7 @@ const id = {
         period: "Agt 2025 - Jan 2025",
         description:
           "Membangun sistem deteksi retak objek untuk struktur beton menggunakan pemrosesan citra dan YOLOv8, mencapai akurasi 95% dan meningkatkan efisiensi pemeliharaan.",
+        showInCV: true,
       },
       {
         company: "Toyota Motor Manufacturing Indonesia",
@@ -532,6 +567,7 @@ const id = {
         period: "Agt 2024 - Agt 2025",
         description:
           "Membangun pipeline deteksi objek menggunakan YOLOv8 untuk mengklasifikasikan komponen otomotif dan mengotomatiskan anotasi, mengurangi waktu pelabelan lebih dari 70% dan mencapai akurasi 98,87%.",
+        showInCV: true,
       },
       {
         company: "Research Egrek Digital (ITS)",
@@ -539,6 +575,7 @@ const id = {
         period: "Mar 2024 - Jul 2024",
         description:
           "Mengembangkan skrip pemrosesan citra dan aplikasi klasifikasi Android (Flutter) dengan akurasi 90%+ untuk efisiensi pemanenan kelapa sawit.",
+        showInCV: true,
       },
       {
         company: "Hysage (ITS)",
@@ -546,6 +583,7 @@ const id = {
         period: "Agt 2023 - Des 2023",
         description:
           "Merancang wiring elektrik dan mengembangkan sistem pemantauan IoT real-time menggunakan Laravel untuk manajemen hidroponik.",
+        showInCV: true,
       },
       {
         company: "Elmech Technology",
@@ -553,6 +591,7 @@ const id = {
         period: "Jan 2022 - Agt 2022",
         description:
           "Merancang PCB kustom, merakit komponen elektronik, dan memprogram mikrokontroler Arduino dalam C++ untuk prototipe mesin.",
+        showInCV: true,
       },
     ],
   },
@@ -565,6 +604,7 @@ const id = {
         period: "2023 - 2024",
         description:
           "Memimpin divisi riset untuk menumbuhkan inovasi dan keterampilan teknis di kalangan mahasiswa. Menyelenggarakan lokakarya tentang pemrograman mikrokontroler dan IoT, mengelola tim yang terdiri dari 15 staf dan berbagai proyek mahasiswa.",
+        showInCV: true,
       },
     ],
   },
@@ -590,6 +630,7 @@ const id = {
         link_visitsite: "https://example.com",
         link_sourcecode: "https://github.com",
         tags: ["YOLOv8", "Python", "TMMIN"],
+        showInCV: true,
       },
       {
         title: "Egrek Digital",
@@ -607,6 +648,7 @@ const id = {
         ],
         link_sourcecode: "https://github.com",
         tags: ["Flutter", "Python", "OpenCV"],
+        showInCV: true,
       },
       {
         title: "Hydroponics Management System",
@@ -623,6 +665,7 @@ const id = {
           "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
         ],
         tags: ["IoT", "Laravel", "Automation"],
+        showInCV: true,
       },
       {
         title: "Monitoring 3 Phase Motor",
@@ -638,6 +681,7 @@ const id = {
           "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?q=80&w=2070&auto=format&fit=crop",
         ],
         tags: ["IoT", "STM32", "Instrumentation"],
+        showInCV: true,
       },
       {
         title: "Line Tracer Analog",
@@ -653,6 +697,7 @@ const id = {
           "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2070&auto=format&fit=crop",
         ],
         tags: ["Analog", "Robotics", "PCB Design"],
+        showInCV: true,
       },
     ],
   },
@@ -667,6 +712,7 @@ const id = {
         link: "https://www.yokogawa.co.id/",
         image:
           "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop",
+        showInCV: true,
       },
       {
         year: "2020",
@@ -676,6 +722,7 @@ const id = {
         link: "#",
         image:
           "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2070&auto=format&fit=crop",
+        showInCV: true,
       },
       {
         year: "2019",
@@ -685,6 +732,7 @@ const id = {
         link: "#",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop",
+        showInCV: true,
       },
     ],
   },
