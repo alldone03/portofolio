@@ -375,6 +375,16 @@ const en = {
         showInCV: true,
       },
       {
+        year: "2025",
+        title: "English Certification B1 Level",
+        issuer: "Global Language Center ITS",
+        description: "Fundamental electrical wiring and installation safety.",
+        link: "https://www.linkedin.com/in/aldan-prayogi/overlay/1768982361621/single-media-viewer/?profileId=ACoAAD5j078BAJ2NLam_Q5grELpvkefZIrsuwus",
+        image:
+          "https://media.licdn.com/dms/image/v2/D562DAQHNt74GPq_ewg/profile-treasury-document-cover-images_480/B56ZvfjSlJIUBI-/0/1768982130959?e=1769590800&v=beta&t=eOdc1rBZm7n7JshWn6CMKM6N9C5L5k9ibkVYudnqNn8",
+        showInCV: true,
+      },
+      {
         year: "2020",
         title: "PLC-Based Control Installation",
         issuer: "BNSP",
@@ -385,16 +395,7 @@ const en = {
           "https://media.licdn.com/dms/image/v2/D562DAQHpuIMfONm61g/profile-treasury-document-cover-images_480/B56ZneJg6RI0BI-/0/1760368673363?e=1769529600&v=beta&t=O6UB0gEV6Ce0VYoqiG9TQxX_WELBjnrRSVKemLzwMFY",
         showInCV: true,
       },
-      {
-        year: "2025",
-        title: "Simple Building Electrical Installation",
-        issuer: "BNSP",
-        description: "Fundamental electrical wiring and installation safety.",
-        link: "https://www.linkedin.com/in/aldan-prayogi/overlay/1768982361621/single-media-viewer/?profileId=ACoAAD5j078BAJ2NLam_Q5grELpvkefZIrsuwus",
-        image:
-          "https://media.licdn.com/dms/image/v2/D562DAQHNt74GPq_ewg/profile-treasury-document-cover-images_480/B56ZvfjSlJIUBI-/0/1768982130959?e=1769590800&v=beta&t=eOdc1rBZm7n7JshWn6CMKM6N9C5L5k9ibkVYudnqNn8",
-        showInCV: true,
-      },
+
       {
         year: "2019",
         title: "Simple Building Electrical Installation",
