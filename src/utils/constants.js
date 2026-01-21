@@ -92,24 +92,24 @@ const en = {
   skills: {
     title: "Skills",
     hard: [
-  "Distributed Control System (Yokogawa DCS)",
-  "Control Logic Design (Sequence & Interlock)",
-  "Instrumentation & Control Engineering",
-  "PLC-Based Control Systems",
-  "Electrical & Control Panel Wiring",
-  "Industrial Automation Systems",
-  "Control System Troubleshooting",
-  "Linux Server (Ubuntu VPS)",
-  "Docker & Docker Compose",
-  "Git & CI/CD (GitHub Actions)"
-],
-soft: [
-  "Problem Solving",
-  "Analytical Thinking",
-  "Technical Communication",
-  "Collaboration & Teamwork",
-  "Fast Learner"
-]
+      "Distributed Control System (Yokogawa DCS)",
+      "Control Logic Design (Sequence & Interlock)",
+      "Instrumentation & Control Engineering",
+      "PLC-Based Control Systems",
+      "Electrical & Control Panel Wiring",
+      "Industrial Automation Systems",
+      "Control System Troubleshooting",
+      "Linux Server (Ubuntu VPS)",
+      "Docker & Docker Compose",
+      "Git & CI/CD (GitHub Actions)",
+    ],
+    soft: [
+      "Problem Solving",
+      "Analytical Thinking",
+      "Technical Communication",
+      "Collaboration & Teamwork",
+      "Fast Learner",
+    ],
   },
   education_section: {
     subtitle: "Academic Background",
@@ -223,10 +223,11 @@ soft: [
         name: "Himpunan Mahasiswa Departemen Teknik Elektro Otomasi (HMDTEO)",
         role: "Staff profession and science",
         period: "2023 - 2024",
-        description:
-          ["Delivered hands-on technical training focused on PLC programming fundamentals for automation engineering students",
-"Explained control logic using practical analogies and real-world process examples to improve conceptual understanding",
-"Helped students grasp core automation concepts including sequence logic, I/O behavior, and control flow through practice-based sessions"],
+        description: [
+          "Delivered hands-on technical training focused on PLC programming fundamentals for automation engineering students",
+          "Explained control logic using practical analogies and real-world process examples to improve conceptual understanding",
+          "Helped students grasp core automation concepts including sequence logic, I/O behavior, and control flow through practice-based sessions",
+        ],
         showInCV: true,
       },
     ],
@@ -382,6 +383,16 @@ soft: [
         link: "https://www.linkedin.com/in/aldan-prayogi/details/certifications/1760368721827/single-media-viewer/?profileId=ACoAAD5j078BAJ2NLam_Q5grELpvkefZIrsuwus",
         image:
           "https://media.licdn.com/dms/image/v2/D562DAQHpuIMfONm61g/profile-treasury-document-cover-images_480/B56ZneJg6RI0BI-/0/1760368673363?e=1769529600&v=beta&t=O6UB0gEV6Ce0VYoqiG9TQxX_WELBjnrRSVKemLzwMFY",
+        showInCV: true,
+      },
+      {
+        year: "2025",
+        title: "Simple Building Electrical Installation",
+        issuer: "BNSP",
+        description: "Fundamental electrical wiring and installation safety.",
+        link: "https://www.linkedin.com/in/aldan-prayogi/overlay/1768982361621/single-media-viewer/?profileId=ACoAAD5j078BAJ2NLam_Q5grELpvkefZIrsuwus",
+        image:
+          "https://media.licdn.com/dms/image/v2/D562DAQHNt74GPq_ewg/profile-treasury-document-cover-images_480/B56ZvfjSlJIUBI-/0/1768982130959?e=1769590800&v=beta&t=eOdc1rBZm7n7JshWn6CMKM6N9C5L5k9ibkVYudnqNn8",
         showInCV: true,
       },
       {
