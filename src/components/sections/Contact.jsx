@@ -55,7 +55,7 @@ const Contact = () => {
                                         className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white hover:text-primary transition-all duration-300"
                                     >
                                         <span className="sr-only">{social.name}</span>
-                                        <img src={social.icon} alt={social.name} className="w-6 h-6 invert brightness-0" />
+                                        <img src={social.icon} alt={social.name} className="w-6 h-6  " />
                                     </a>
                                 ))}
                             </div>

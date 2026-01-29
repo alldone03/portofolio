@@ -12,6 +12,7 @@ import Education from "../components/sections/Education";
 import Organization from "../components/sections/Organization";
 import { PROFILE_DATA } from "../utils/constants";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     const { t } = useTranslation();
@@ -81,6 +82,11 @@ export default function Home() {
                         <a href="#certifications" className="link link-hover">{t('nav.certifications')}</a>
                         <a href="#contact" className="link link-hover">{t('nav.contact')}</a>
                     </nav>
+                    <nav className="my-4 flex flex-row justify-center gap-4 ">
+                        <Link to={"/pdf-tools"} className="btn btn-primary btn-lg w-full rounded-2xl shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all">PDF Tools</Link>
+                        <Link to={"/labelling_tools"} className="btn btn-primary btn-lg w-full rounded-2xl shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all">Labelling</Link>
+                    </nav>
+
                     <nav>
                         <div className="flex flex-wrap justify-center gap-4 bg-white rounded-xl p-2">
                             {PROFILE_DATA.socials.map((social, index) => (
