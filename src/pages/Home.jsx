@@ -83,8 +83,8 @@ export default function Home() {
                         <a href="#contact" className="link link-hover">{t('nav.contact')}</a>
                     </nav>
                     <nav className="my-4 flex flex-row justify-center gap-4 ">
-                        <Link to={"/pdf-tools"} className="btn btn-primary btn-lg w-full rounded-2xl shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all">PDF Tools</Link>
-                        <Link to={"/labelling_tools"} className="btn btn-primary btn-lg w-full rounded-2xl shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all">Labelling</Link>
+                        <a href={"/pdf-tools"} className="btn btn-primary btn-lg w-full rounded-2xl shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all">PDF Tools</a>
+                        <a href={"/labelling_tools"} className="btn btn-primary btn-lg w-full rounded-2xl shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all">Labelling</a>
                     </nav>
 
                     <nav>
