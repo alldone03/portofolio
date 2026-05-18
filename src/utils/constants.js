@@ -136,9 +136,19 @@ const en = {
     title: "Experience",
     items: [
       {
+        company: "Petrokimia Gresik",
+        role: "System",
+        period: "March 2026 - Present",
+        description: [
+          "Developed products in compliance with IP62 protection standards"
+,"Improved stock opname efficiency from 1 hour to 15 minutes per product through the development of custom tools and web applications"
+        ],
+        showInCV: true, // Set to false to hide from CV
+      },
+      {
         company: "Direktorat Sumber Daya Manusia dan Organisasi ITS",
         role: "Software Engineer",
-        period: "Oct 2025 - Present",
+        period: "Oct 2025 - March 2026",
         description: [
           "Designed and implemented a full-stack web-based assessment platform to automate and standardize competency assessments, combined dynamic question difficulty, scoring logic, and personalized learning recommendations.",
         ],
@@ -151,6 +161,7 @@ const en = {
         period: "Aug 2025 - Present",
         description: [
           "Served as Project Manager responsible for project planning and timeline management. When microcontroller resource limitations caused prediction processing errors, led the decision to migrate computational workloads to the backend, with result transmitted as status signals to trigger alarm, ensuring system reliability and on-time delivery.",
+          "Applied CI/CD automation to accelerate deployment and reduce lead time",
         ],
         showInCV: true,
       },
@@ -237,6 +248,29 @@ const en = {
     view_project: "View Project",
     source_code: "Source Code",
     items: [
+      {
+        title: "RFID Handheld Scanner (PetroScanner-001)",
+year: "2026",
+description:
+  "Designed and built an industrial IoT handheld RFID scanner to automate inventory tracking, reducing warehouse stock opname lead time.",
+details:
+  "Served as the primary hardware and firmware developer for a custom RFID scanning ecosystem. Developed ESP32-based firmware utilizing BLE (Bluetooth Low Energy) and WebSocket protocols to ensure low-latency, real-time data transmission to a progressive web application (PWA). Engineered a dedicated WebSocket emulator to streamline testing environments and designed the physical, ergonomic controller housing using parametric 3D modeling in FreeCAD. The system drastically reduces manual warehouse search times and human error during large-scale asset audits.",
+        image: "",
+        images: [""],
+        link_visitsite: "https://example.com",
+        link_sourcecode: "https://github.com",
+       tags: [
+  "Hardware & Firmware",
+  "ESP32",
+  "C++ / Arduino",
+  "WebSockets",
+  "BLE (Bluetooth Low Energy)",
+  "FreeCAD (3D Design)",
+  "React (PWA)",
+  "Node.js / Python", // Pilih salah satu yang digunakan untuk backend emulator/PWA Anda
+],
+        showInCV: false,
+      },
       {
         title: "Cogniva – AI Assessment & Adaptive Learning Platform",
         year: "2026",
