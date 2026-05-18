@@ -136,14 +136,14 @@ const en = {
     title: "Experience",
     items: [
       {
-        company: "Petrokimia Gresik",
-        role: "System",
-        period: "March 2026 - Present",
-        description: [
-          "Developed products in compliance with IP62 protection standards"
-,"Improved stock opname efficiency from 1 hour to 15 minutes per product through the development of custom tools and web applications"
-        ],
-        showInCV: true, // Set to false to hide from CV
+       company: "PT Petrokimia Gresik",
+role: "IoT System Engineer", // Bisa disesuaikan dengan "IoT Developer" atau "Embedded System Engineer"
+period: "March 2026 - Present",
+description: [
+  "Developed an industrial handheld RFID scanner in compliance with IP62 ingress protection standards for harsh warehouse environments.",
+  "Improved stock opname efficiency by 75%, reducing operational lead time from 1 hour to 15 minutes per item through custom firmware and web applications."
+],
+showInCV: true,
       },
       {
         company: "Direktorat Sumber Daya Manusia dan Organisasi ITS",
