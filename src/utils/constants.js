@@ -142,7 +142,7 @@ period: "March 2026 - Present",
 description: [
 "Developed an IP62-compliant industrial handheld RFID scanner, improving stock opname efficiency by 75% and reducing item search time from 1 hour to 15 minutes.",
 "Built a Smart Receiving Assistant using OCR and RPA to automate document extraction and system entry, reducing manual processing and improving receiving accuracy."
-]
+],
 showInCV: true,
       },
       {
