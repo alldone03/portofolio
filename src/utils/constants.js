@@ -87,7 +87,7 @@ const en = {
     name: "Aldan Prayogi",
     role: "Automation & Control Systems Engineer",
     description:
-      "Engineer specializing in industrial automation, computer vision, and embedded systems with experience in designing end-to-end solutions from hardware integration to software deployment. Built AI-based visual inspection systems using deep learning, industrial RFID devices, and automation platforms leveraging OCR and RPA to optimize monitoring and operational processes. Proven ability to improve detection accuracy up to 98% while significantly reducing manual workload and processing time.",
+      "Engineer specializing in industrial automation, computer vision, and embedded systems with experience in designing end-to-end solutions from hardware integration to software deployment. Built AI-based visual inspection systems using deep learning, industrial RFID devices, and automation platforms leveraging OCR and RPA to optimize monitoring and operational processes. Proven ability to improve detection accuracy up to 93% while significantly reducing manual workload and processing time.",
   },
   skills: {
     title: "Skills",
