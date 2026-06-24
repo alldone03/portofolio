@@ -179,7 +179,7 @@ showInCV: true,
         period: "Aug 2024 - Aug 2025",
         description: [
           "Supported TPS DX initiatives by developing production dashboards integrated with manufacturing systems to visualize end-to-end processes, product tracking, and cycle time per manpower and machine.",
-          "Improved visual inspection performance on the underbody inspection line by redesigning the object detection pipeline to meet inspection standards, increasing detection accuracy to 98.87% and reducing inspection time from 40 seconds to 5 seconds per unit.",
+          "Improved visual inspection performance on the underbody inspection line by redesigning the object detection pipeline to meet inspection standards, increasing detection accuracy to 93% and reducing inspection time from 40 seconds to 5 seconds per unit.",
           "Optimized the data labeling workflow, reducing annotation time for 100 images from 2166 minutes to 489 minutes, significantly accelerating model iteration and deployment readiness.",
         ],
         showInCV: true,
