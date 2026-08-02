@@ -108,7 +108,7 @@ const en = {
       "Analytical Thinking",
       "Technical Communication",
       "Collaboration & Teamwork",
-      "Fast Learner",
+      // "Fast Learner",
     ],
   },
   education_section: {
@@ -122,7 +122,7 @@ const en = {
         school: "Institut Teknologi Sepuluh Nopember (ITS)",
         degree: "Bachelor of Applied Science in Automation Engineering",
         period: "2022 - 2026 (expected)",
-        gpa: "3.68/4.00",
+        gpa: "3.70/4.00",
         description:
           "Focused on Industrial Automation and Process Control with emphasis on Distributed Control Systems (DCS), PLC logic design, and field instrumentation. Gained hands-on experience through applied projects involving control logic implementation, signal handling (analog & digital), interlocks, and basic troubleshooting concepts relevant to oil & gas and manufacturing operations.",
         achievements: [
@@ -137,13 +137,13 @@ const en = {
     items: [
       {
        company: "PT Petrokimia Gresik",
-role: "IoT System Engineer", // Bisa disesuaikan dengan "IoT Developer" atau "Embedded System Engineer"
-period: "March 2026 - Present",
-description: [
-"Developed an IP62-compliant industrial handheld RFID scanner, improving stock opname efficiency by 75% and reducing item search time from 1 hour to 15 minutes.",
-"Built a Smart Receiving Assistant using OCR and RPA to automate document extraction and system entry, reducing manual processing and improving receiving accuracy."
-],
-showInCV: true,
+        role: "IoT System Engineer", // Bisa disesuaikan dengan "IoT Developer" atau "Embedded System Engineer"
+        period: "March 2026 - August 2026",
+        description: [
+        "Developed an IP62-compliant industrial handheld RFID scanner, improving stock opname efficiency by 75% and reducing item search time from 1 hour to 15 minutes.",
+        "Built a Smart Receiving Assistant using OCR and RPA to automate document extraction and system entry, reducing manual processing and improving receiving accuracy."
+        ],
+        showInCV: true,
       },
       {
         company: "Direktorat Sumber Daya Manusia dan Organisasi ITS",
@@ -158,10 +158,10 @@ showInCV: true,
         company:
           "Pusat Studi Mitigasi Kebencanaan dan Perubahan Iklim (MKPI) ITS",
         role: "Project Manager",
-        period: "Aug 2025 - Present",
+        period: "Aug 2025 - August 2026",
         description: [
           "Served as Project Manager responsible for project planning and timeline management. When microcontroller resource limitations caused prediction processing errors, led the decision to migrate computational workloads to the backend, with result transmitted as status signals to trigger alarm, ensuring system reliability and on-time delivery.",
-          "Applied CI/CD automation to accelerate deployment and reduce lead time",
+          "Applied CI/CD automation to accelerate deployment and reduce lead time code synchronization",
         ],
         showInCV: true,
       },
@@ -567,7 +567,7 @@ const id = {
         school: "Institut Teknologi Sepuluh Nopember (ITS)",
         degree: "Sarjana Terapan Teknik Otomasi",
         period: "2022 - Sekarang",
-        gpa: "3.60/4.00",
+        gpa: "3.70/4.00",
         description:
           "Fokus pada Otomasi Industri, PLC, IoT, dan Sistem Tertanam. Aktif dalam proyek robotika dan penelitian, mempertahankan catatan akademik yang kuat.",
         achievements: [
