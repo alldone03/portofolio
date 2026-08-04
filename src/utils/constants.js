@@ -87,7 +87,7 @@ const en = {
     name: "Aldan Prayogi",
     role: "Automation & Control Systems Engineer",
     description:
-      "Engineer specializing in industrial automation, computer vision, and embedded systems with experience in designing end-to-end solutions from hardware integration to software deployment. Built AI-based visual inspection systems using deep learning, industrial RFID devices, and automation platforms leveraging OCR and RPA to optimize monitoring and operational processes. Proven ability to improve detection accuracy up to 93% while significantly reducing manual workload and processing time.",
+      "Engineer specializing in industrial automation, computer vision, and embedded systems with experience in designing end-to-end solutions from hardware integration to software deployment. Built AI-based visual inspection systems using deep learning, industrial RFID devices, and automation platforms leveraging OCR and RPA to optimize monitoring and operational processes. Proven ability to improve detection accuracy up to 93.70% while significantly reducing manual workload and processing time.",
   },
   skills: {
     title: "Skills",
@@ -179,7 +179,7 @@ const en = {
         period: "Aug 2024 - Aug 2025",
         description: [
           "Supported TPS DX initiatives by developing production dashboards integrated with manufacturing systems to visualize end-to-end processes, product tracking, and cycle time per manpower and machine.",
-          "Improved visual inspection performance on the underbody inspection line by redesigning the object detection pipeline to meet inspection standards, increasing detection accuracy to 93% and reducing inspection time from 40 seconds to 5 seconds per unit.",
+          "Improved visual inspection performance on the underbody inspection line by redesigning the object detection pipeline to meet inspection standards, increasing detection accuracy to 93.70% and reducing inspection time from 40 seconds to 5 seconds per unit.",
           "Optimized the data labeling workflow, reducing annotation time for 100 images from 2166 minutes to 489 minutes, significantly accelerating model iteration and deployment readiness.",
         ],
         showInCV: true,
@@ -352,9 +352,9 @@ details:
         details:
           "Built using Laravel for the backend and React for the frontend dashboard. The hardware uses an ESP32 to push sensor data through a REST API every 60 seconds.",
         image:
-          "https://images.unsplash.com/photo-1558449028-s54930927f10?q=80&w=2070&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1558449028-s5493.700927f10?q=80&w=2070&auto=format&fit=crop",
         images: [
-          "https://images.unsplash.com/photo-1558449028-s54930927f10?q=80&w=2070&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1558449028-s5493.700927f10?q=80&w=2070&auto=format&fit=crop",
           "https://images.unsplash.com/photo-1585144860106-9983ed736277?q=80&w=2070&auto=format&fit=crop",
           "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
         ],
@@ -704,9 +704,9 @@ const id = {
         details:
           "Dibangun menggunakan Laravel untuk backend dan React untuk dashboard frontend. Perangkat keras menggunakan ESP32 untuk mengirimkan data sensor melalui REST API setiap 60 detik.",
         image:
-          "https://images.unsplash.com/photo-1558449028-s54930927f10?q=80&w=2070&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1558449028-s5493.700927f10?q=80&w=2070&auto=format&fit=crop",
         images: [
-          "https://images.unsplash.com/photo-1558449028-s54930927f10?q=80&w=2070&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1558449028-s5493.700927f10?q=80&w=2070&auto=format&fit=crop",
           "https://images.unsplash.com/photo-1585144860106-9983ed736277?q=80&w=2070&auto=format&fit=crop",
           "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
         ],
