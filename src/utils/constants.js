@@ -121,7 +121,7 @@ const en = {
       {
         school: "Institut Teknologi Sepuluh Nopember (ITS)",
         degree: "Bachelor of Applied Science in Automation Engineering",
-        period: "2022 - 2026 (expected)",
+        period: "2022 - 2026",
         gpa: "3.70/4.00",
         description:
           "Focused on Industrial Automation and Process Control with emphasis on Distributed Control Systems (DCS), PLC logic design, and field instrumentation. Gained hands-on experience through applied projects involving control logic implementation, signal handling (analog & digital), interlocks, and basic troubleshooting concepts relevant to oil & gas and manufacturing operations.",
