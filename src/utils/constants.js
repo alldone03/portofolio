@@ -168,7 +168,7 @@ const en = {
       {
         company: "PLN Nusantara Power And Services",
         role: "Automation And Decision Support",
-        period: "Aug 2025 - Jan 2025",
+        period: "Aug 2025 - Jan 2026",
         description:
           "Automated the inspection of micro-cracks in solar panel (PLTS) modules that were difficult to identify through manual inspection even with electroluminescence (EL) imaging. Developed a YOLO-based image processing pipeline and a data summarization application to convert image-level detection results into actionable inspection summaries, supporting more efficient and consistent maintenance evaluations.",
         showInCV: true,
