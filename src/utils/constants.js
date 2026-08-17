@@ -102,6 +102,8 @@ const en = {
       "Linux Server (Ubuntu VPS)",
       "Docker & Docker Compose",
       "Git & CI/CD (GitHub Actions)",
+      "FreeCAD",
+      "KiCAD",
     ],
     soft: [
       "Problem Solving",
