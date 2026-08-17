@@ -137,7 +137,7 @@ const en = {
     items: [
       {
        company: "PT Petrokimia Gresik",
-        role: "IoT System Engineer", // Bisa disesuaikan dengan "IoT Developer" atau "Embedded System Engineer"
+        role: "IoT System Engineer Intern", // Bisa disesuaikan dengan "IoT Developer" atau "Embedded System Engineer"
         period: "March 2026 - August 2026",
         description: [
         "Developed an IP62-compliant industrial handheld RFID scanner, improving stock opname efficiency by 75% and reducing item search time from 1 hour to 15 minutes.",
@@ -167,23 +167,23 @@ const en = {
       },
       {
         company: "PLN Nusantara Power And Services",
-        role: "Automation And Decision Support",
+        role: "Automation & AI Engineer Intern",
         period: "Aug 2025 - Jan 2026",
         description:
           "Automated the inspection of micro-cracks in solar panel (PLTS) modules that were difficult to identify through manual inspection even with electroluminescence (EL) imaging. Developed a YOLO-based image processing pipeline and a data summarization application to convert image-level detection results into actionable inspection summaries, supporting more efficient and consistent maintenance evaluations.",
         showInCV: true,
       },
-      {
-        company: "Toyota Motor Manufacturing Indonesia",
-        role: "Digital Manufacturing / DX Engineer Intern",
-        period: "Aug 2024 - Aug 2025",
-        description: [
-          "Supported TPS DX initiatives by developing production dashboards integrated with manufacturing systems to visualize end-to-end processes, product tracking, and cycle time per manpower and machine.",
-          "Improved visual inspection performance on the underbody inspection line by redesigning the object detection pipeline to meet inspection standards, increasing detection accuracy to 93.70% and reducing inspection time from 40 seconds to 5 seconds per unit.",
-          "Optimized the data labeling workflow, reducing annotation time for 100 images from 2166 minutes to 489 minutes, significantly accelerating model iteration and deployment readiness.",
-        ],
-        showInCV: true,
-      },
+     {
+  company: "Toyota Motor Manufacturing Indonesia",
+  role: "Digital Manufacturing / DX Engineer Intern",
+  period: "Aug 2024 - Aug 2025",
+  description: [
+    "Supported TPS and Digital Transformation initiatives by developing production monitoring solutions to visualize manufacturing processes, product traceability, and cycle time across manpower and equipment.",
+    "Applied data-driven problem solving to identify inspection process issues and develop an AI-based visual inspection solution, achieving 93.70% detection accuracy and reducing inspection time from 40 seconds to 5 seconds per unit.",
+    "Improved manufacturing data workflows by optimizing the image annotation process, reducing annotation time from 2,166 minutes to 489 minutes per 100 images and supporting faster model development."
+  ],
+  showInCV: true,
+},
       {
         company: "LPK Yaruki Solusi Indonesia",
         role: "Web Developer (Marketing Website) — Freelance",
