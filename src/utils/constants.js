@@ -134,7 +134,7 @@ const en = {
       },
       {
         school: "SMK Negeri 2 Bojonegoro",
-        degree: "Vocational High School Diploma in Mechatronics Engineering (4-Year Program)",
+        degree: "Vocational High School in Mechatronics Engineering (4-Year Program)",
         period: "2018 - 2022",
         gpa: "89.70/100",
         description:
