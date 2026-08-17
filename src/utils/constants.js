@@ -177,7 +177,7 @@ const en = {
       },
      {
   company: "Toyota Motor Manufacturing Indonesia",
-  role: "Digital Manufacturing / DX Engineer Intern",
+  role: "Operational Management Development Division (OMDD) Digital Manufacturing / DX Engineer Intern",
   period: "Aug 2024 - Aug 2025",
   description: [
     "Supported TPS and Digital Transformation initiatives by developing production monitoring solutions to visualize manufacturing processes, product traceability, and cycle time across manpower and equipment.",
