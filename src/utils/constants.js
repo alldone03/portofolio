@@ -136,6 +136,7 @@ const en = {
         school: "SMK Negeri 2 Bojonegoro",
         degree: "Vocational High School Diploma in Mechatronics Engineering (4-Year Program)",
         period: "2018 - 2022",
+        gpa: "89.70/100",
         description:
           "Completed a 4-year vocational program specializing in Mechatronics Engineering, focusing on industrial automation, robotics, electrical systems, and PLC programming.",
         achievements: [
@@ -592,6 +593,7 @@ const id = {
         school: "SMK Negeri 2 Bojonegoro",
         degree: "Teknik Mekatronika (Program 4 Tahun)",
         period: "2018 - 2022",
+        gpa: "89.70/100",
         description:
           "Menyelesaikan program kejuruan 4 tahun di bidang Teknik Mekatronika dengan fokus pada otomasi industri, robotika, kelistrikan, dan pemrograman PLC.",
         achievements: [
