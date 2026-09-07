@@ -852,5 +852,5 @@ const id = {
 
 export const RESOURCES = {
   en: { translation: en },
-  id: { translation: id },
+  // id: { translation: id },
 };
