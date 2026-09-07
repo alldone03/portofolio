@@ -117,48 +117,51 @@ const en = {
     subtitle: "Academic Background",
     key_achievements: "Key Achievements",
   },
-  education: {
-    title: "Education",
-    items: [
-      {
-        school: "Institut Teknologi Sepuluh Nopember (ITS)",
-        degree: "Bachelor of Applied Science in Automation Engineering",
-        period: "2022 - 2026",
-        gpa: "3.70/4.00",
-        description:
-          "Focused on Industrial Automation and Process Control with emphasis on Distributed Control Systems (DCS), PLC logic design, and field instrumentation. Gained hands-on experience through applied projects involving control logic implementation, signal handling (analog & digital), interlocks, and basic troubleshooting concepts relevant to oil & gas and manufacturing operations.",
-        achievements: [
-          "Published Research on Palm Oil Harvesting Efficiency",
-          "Lead campus digitalization projects",
-        ],
-      },
-      {
-        school: "SMK Negeri 2 Bojonegoro",
-        degree: "Vocational High School in Mechatronics Engineering (4-Year Program)",
-        period: "2018 - 2022",
-        gpa: "89.70/100",
-        description:
-          "Completed a 4-year vocational program specializing in Mechatronics Engineering, focusing on industrial automation, robotics, electrical systems, and PLC programming.",
-        achievements: [
-          "2nd Place - Regional Student Competency Competition (LKS) in Mechatronics",
-          "Regional Representative for the East Java Provincial Student Competency Competition (LKS) in Mechatronics (2021)",
-        ],
-      },
-    ],
-  },
+education: {
+  title: "Education",
+  items: [
+    {
+      school: "Institut Teknologi Sepuluh Nopember (ITS)",
+      degree: "Bachelor of Applied Science in Automation Engineering",
+      period: "2022 - 2026",
+      gpa: "3.70/4.00",
+      description:
+        "Focused on Industrial Automation and Process Control, with an emphasis on Distributed Control Systems (DCS), PLC programming, and field instrumentation. Gained hands-on experience through applied projects involving control logic, analog and digital signal handling, interlocks, and industrial troubleshooting.",
+      achievements: [
+        "Graduated with a GPA of 3.70/4.00",
+        "Published research on Palm Oil Harvesting Efficiency",
+        "Led campus digitalization projects involving IoT and industrial automation",
+      ],
+    },
+    {
+      school: "SMK Negeri 2 Bojonegoro",
+      degree: "Vocational High School in Mechatronics Engineering (4-Year Program)",
+      period: "2018 - 2022",
+      gpa: "89.70/100",
+      description:
+        "Completed a 4-year vocational program specializing in Mechatronics Engineering, with a focus on industrial automation, robotics, electrical systems, and PLC programming.",
+      achievements: [
+        "2nd Place - Regional Student Competency Competition (LKS) in Mechatronics",
+        "Represented East Java at the Provincial Student Competency Competition (LKS) in Mechatronics (2021)",
+      ],
+    },
+  ],
+},
   experience: {
     title: "Experience",
     items: [
       {
-       company: "PT Petrokimia Gresik",
-        role: "IoT System Engineer Intern", // Bisa disesuaikan dengan "IoT Developer" atau "Embedded System Engineer"
-        period: "March 2026 - August 2026",
-        description: [
-        "Developed an IP62-compliant industrial handheld RFID scanner, improving stock opname efficiency by 75% and reducing item search time from 1 hour to 15 minutes.",
-        "Built a Smart Receiving Assistant using OCR and RPA to automate document extraction and system entry, reducing manual processing and improving receiving accuracy."
-        ],
-        showInCV: true,
-      },
+  company: "PT Petrokimia Gresik",
+  role: "IoT System Engineer Intern",
+  period: "March 2026 - August 2026",
+  description: [
+    "Developed an IP62-compliant industrial handheld RFID scanner, improving stock opname efficiency by 75% and reducing item search time from 1 hour to 15 minutes through integrated RFID, ESP32, and web-based inventory management.",
+    "Developed a Smart Receiving Assistant using OCR and RPA to automate document data extraction and system entry, reducing repetitive manual processing and improving workflow structure.",
+    "Developed a camera-based AI attendance system with facial recognition and real-time integration with the department's existing application.",
+    "Developed Rover v3 for safer SLAM-based exploration, covering 3D design with FreeCAD, 3D printing, mechanical assembly, and prototype testing."
+  ],
+  showInCV: true,
+},
       {
         company: "Direktorat Sumber Daya Manusia dan Organisasi ITS",
         role: "Software Engineer",
@@ -203,6 +206,7 @@ const en = {
         role: "Web Developer (Marketing Website) — Freelance",
         period: "Jun 2025 - Sep 2025",
         description: [
+          "Developed and optimized a CMS-based marketing website, enabling non-technical users to independently manage and update website content.",
           "Optimized frontend performance, achieving a 35% faster page load time to improve user experience and retention.",
           "Supported early-stage growth by acquiring 120 new users in the first month, reaching 125 active users, with traffic primarily driven by direct and organic search channels.",
         ],
