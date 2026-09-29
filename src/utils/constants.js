@@ -126,7 +126,7 @@ education: {
       period: "2022 - 2026",
       gpa: "3.70/4.00",
       description:
-        "Focused on Industrial Automation and Process Control, with an emphasis on Distributed Control Systems (DCS), PLC programming, and field instrumentation. Gained hands-on experience through applied projects involving control logic, analog and digital signal handling, interlocks, and industrial troubleshooting.",
+        "Focused on Industrial Automation and Process Control, with an emphasis on Distributed Control Systems (DCS), PLC programming, and field instrumentation. Gained hands-on experience in control logic, analog and digital signal handling, interlocks, and industrial troubleshooting. Undergraduate thesis focused on CNN-based detection of Stut Bolt and Hole completeness for Dash Panel inspection in automotive manufacturing, applying computer vision and deep learning to automated quality inspection.",
       achievements: [
         "Graduated with a GPA of 3.70/4.00",
         "Published research on Palm Oil Harvesting Efficiency",
@@ -150,6 +150,17 @@ education: {
   experience: {
     title: "Experience",
     items: [
+      {
+  company: "PT Pupuk Kujang",
+  role: "IoT System Engineer Intern",
+  period: "March 2026 - August 2026",
+  description: [
+    "Calibrated Preseeure transmitter, Level Transmitter ",
+    "fixed problem control pneumatic pabrik 1A, with change relay ",
+    "Implemented data structered data for electrical motor service report, to create report and calculate robusness of electric motor " 
+  ],
+  showInCV: true,
+},
       {
   company: "PT Petrokimia Gresik",
   role: "IoT System Engineer Intern",
