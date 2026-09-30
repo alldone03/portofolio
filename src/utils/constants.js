@@ -192,7 +192,7 @@ education: {
           "Served as Project Manager responsible for project planning and timeline management. When microcontroller resource limitations caused prediction processing errors, led the decision to migrate computational workloads to the backend, with result transmitted as status signals to trigger alarm, ensuring system reliability and on-time delivery.",
           "Applied CI/CD automation to accelerate deployment and reduce lead time code synchronization",
         ],
-        showInCV: true,
+        showInCV: false,
       },
       {
         company: "PLN Nusantara Power And Services",
@@ -239,7 +239,7 @@ education: {
         period: "Aug 2023 - Dec 2023",
         description:
           "Led the end-to-end development of an IoT-based hydroponics management system addressing inconsistent nutrient maintenance due to limited human presence. Designed electrical systems, implemented hardware control logic, and developed a Laravel-based web platform to monitor and remotely control nutrient composition in real time.",
-        showInCV: true,
+        showInCV: false,
       },
       {
         company: "Elmech Technology",
