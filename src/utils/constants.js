@@ -152,12 +152,13 @@ education: {
     items: [
       {
   company: "PT Pupuk Kujang",
-  role: "IoT System Engineer Intern",
-  period: "March 2026 - August 2026",
+  role: "Electrical, Instrumentation and Heavy Equipment Maintenance Staff intern",
+  period: "September 2026 - Present",
   description: [
-    "Calibrated Preseeure transmitter, Level Transmitter ",
-    "fixed problem control pneumatic pabrik 1A, with change relay ",
-    "Implemented data structered data for electrical motor service report, to create report and calculate robusness of electric motor " 
+    "Performed calibration of pressure, level, and temperature transmitters to ensure accurate and reliable instrumentation measurements.",
+    "Troubleshot a pneumatic control system at Plant 1A that failed to reach a 100% output signal, resolving the issue through pneumatic relay replacement.",
+    "Structured electrical motor service report data to improve maintenance documentation and support motor reliability assessment." ,
+    "Performed motor winding and insulation condition checks using a Megger insulation resistance tester as part of electrical motor maintenance." ,
   ],
   showInCV: true,
 },
